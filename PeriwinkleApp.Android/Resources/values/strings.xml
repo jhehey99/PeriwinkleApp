@@ -1,0 +1,68 @@
+<resources>
+    <string name="app_name">Periwinkle App</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_settings">Settings</string>
+	
+	<!--Admin.axml-->
+	<string name="menu_home_title">Home</string>
+	<string name="menu_cli_title">Clients</string>
+	<string name="menu_con_title">Consultants</string>
+	<string name="menu_pend_title">Pending Consultants</string>
+	<string name="menu_logout_title">Logout</string>
+
+	<!--AdminPendingView.cs-->
+	<string name="pending_confirm_msg">Confirm Registration?</string>
+	<string name="pending_accept">Accept</string>
+	<string name="pending_reject">Reject</string>
+	<string name="pending_cancel">Cancel</string>
+
+	<!--Client-->
+	<string name="cli_menu_home_title">Home</string>
+	<string name="cli_menu_device_title">Response</string>
+  <string name="cli_menu_behavior_title">Behavior</string>
+  <string name="cli_menu_accelerometer_title">Accelerometer</string>
+  <string name="cli_menu_journal_title">Journal</string>
+  <string name="cli_menu_consultant_title">My Consultant</string>
+  <string name="cli_menu_entertainment_title">Entertainment</string>
+
+  <!--Consultant-->
+	<string name="con_menu_home_title">Home</string>
+	<string name="con_menu_new_title">New Client</string>
+	<string name="con_menu_clients_title">My Clients</string>
+
+	<!--Para sa Spinner sa Registration-->
+	<string-array name="gender">
+		<item>Male</item>
+		<item>Female</item>
+	</string-array>
+
+  <!--Para sa Spinner sa CheckList Instruction Height-->
+  <string-array name="height">
+    <item>m</item>
+    <item>cm</item>
+    <item>ft. in.</item>
+  </string-array>
+
+  <!--Para sa Spinner sa CheckList Instruction Weight-->
+  <string-array name="weight">
+    <item>kg</item>
+    <item>lbs</item>
+  </string-array>
+
+	<string-array name="scale">
+		<item>0</item>
+		<item>1</item>
+		<item>2</item>
+		<item>3</item>
+		<item>4</item>
+		<item>5</item>
+		<item>6</item>
+	</string-array>
+
+<!--registerview.cs-->
+  <string name="OK">OK</string>
+
+
+
+</resources>

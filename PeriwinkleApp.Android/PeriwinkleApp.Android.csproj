@@ -1,0 +1,622 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{18EF3DEE-B9B9-4968-B7A9-DD4B9034FCEA}</ProjectGuid>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TemplateGuid>{d0238942-4dcf-4d08-b23a-81159ca3b345}</TemplateGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PeriwinkleApp.Android</RootNamespace>
+    <AssemblyName>PeriwinkleApp.Android</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <AndroidApplication>True</AndroidApplication>
+    <AndroidResgenFile>Resources\Resource.Designer.cs</AndroidResgenFile>
+    <AndroidResgenClass>Resource</AndroidResgenClass>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <AndroidUseLatestPlatformSdk>false</AndroidUseLatestPlatformSdk>
+    <TargetFrameworkVersion>v8.1</TargetFrameworkVersion>
+    <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
+    <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
+    <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
+    <AndroidHttpClientHandlerType>Xamarin.Android.Net.AndroidClientHandler</AndroidHttpClientHandlerType>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>portable</DebugType>
+    <Optimize>False</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidUseSharedRuntime>True</AndroidUseSharedRuntime>
+    <AndroidLinkMode>None</AndroidLinkMode>
+    <EmbedAssembliesIntoApk>False</EmbedAssembliesIntoApk>
+    <AotAssemblies>false</AotAssemblies>
+    <EnableLLVM>false</EnableLLVM>
+    <BundleAssemblies>false</BundleAssemblies>
+    <MandroidI18n />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>PdbOnly</DebugType>
+    <Optimize>True</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidManagedSymbols>true</AndroidManagedSymbols>
+    <AndroidUseSharedRuntime>False</AndroidUseSharedRuntime>
+    <AndroidLinkMode>SdkOnly</AndroidLinkMode>
+    <EmbedAssembliesIntoApk>True</EmbedAssembliesIntoApk>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Mono.Android" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Source\AdapterModels\AccountAdapterModel.cs" />
+    <Compile Include="Source\AdapterModels\BehaviorAdapterModel.cs" />
+    <Compile Include="Source\AdapterModels\JournalAdapterModel.cs" />
+    <Compile Include="Source\AdapterModels\NotificationAdapterModel.cs" />
+    <Compile Include="Source\AdapterModels\QuestionAdapterModel.cs" />
+    <Compile Include="Source\AdapterModels\ReactiveAdapterModel.cs" />
+    <Compile Include="Source\AdapterModels\ReminderAdapterModel.cs" />
+    <Compile Include="Source\AdapterModels\ResponseAdapterModel.cs" />
+    <Compile Include="Source\Adapters\AccountRecyclerAdapter.cs" />
+    <Compile Include="Source\Adapters\AdminClientPageAdapter.cs" />
+    <Compile Include="Source\Adapters\AdminConsultantPageAdapter.cs" />
+    <Compile Include="Source\Adapters\BaseRecyclerAdapter.cs" />
+    <Compile Include="Source\Adapters\BehaviorRecyclerAdapter.cs" />
+    <Compile Include="Source\Adapters\JournalRecyclerAdapter.cs" />
+    <Compile Include="Source\Adapters\NotificationRecyclerAdapter.cs" />
+    <Compile Include="Source\Adapters\QuestionRecyclerAdapter.cs" />
+    <Compile Include="Source\Adapters\ReactiveRecyclerAdapter.cs" />
+    <Compile Include="Source\Adapters\ReminderRecyclerAdapter.cs" />
+    <Compile Include="Source\Adapters\ResponseRecyclerAdapter.cs" />
+    <Compile Include="Source\Cache\CacheProvider.cs" />
+    <Compile Include="Source\DiffUtils\AccountDiffCallback.cs" />
+    <Compile Include="Source\DiffUtils\DiffCallback.cs" />
+    <Compile Include="Source\Extensions\AccountExtensions.cs" />
+    <Compile Include="Source\Factories\AccountAdapterFactory.cs" />
+    <Compile Include="Source\Factories\AlertDialogFactory.cs" />
+    <Compile Include="Source\Factories\AnimationFactory.cs" />
+    <Compile Include="Source\Presenters\AdminPresenters\AdminClientProfileAboutPresenter.cs" />
+    <Compile Include="Source\Presenters\AdminPresenters\AdminClientsPresenter.cs" />
+    <Compile Include="Source\Presenters\AdminPresenters\AdminConsultantProfileAboutPresenter.cs" />
+    <Compile Include="Source\Presenters\AdminPresenters\AdminConsultantProfileClientsPresenter.cs" />
+    <Compile Include="Source\Presenters\AdminPresenters\AdminConsultantsPresenter.cs" />
+    <Compile Include="Source\Presenters\AdminPresenters\AdminPendingPresenter.cs" />
+    <Compile Include="Source\Presenters\ClientPresenters\ClientAccelerometerListPresenter.cs" />
+    <Compile Include="Source\Presenters\ClientPresenters\ClientAccelerometerPresenter.cs" />
+    <Compile Include="Source\Presenters\ClientPresenters\ClientBehaviorListPresenter.cs" />
+    <Compile Include="Source\Presenters\ClientPresenters\ClientBehaviorPresenter.cs" />
+    <Compile Include="Source\Presenters\ClientPresenters\ClientCheckListInstructionPresenter.cs" />
+    <Compile Include="Source\Presenters\ClientPresenters\ClientCheckListQuestionPresenter.cs" />
+    <Compile Include="Source\Presenters\ClientPresenters\ClientHomeBodyPresenter.cs" />
+    <Compile Include="Source\Presenters\ClientPresenters\ClientHomeHeadPresenter.cs" />
+    <Compile Include="Source\Presenters\ClientPresenters\ClientHomePresenter.cs" />
+    <Compile Include="Source\Presenters\ClientPresenters\ClientJournalCreatePresenter.cs" />
+    <Compile Include="Source\Presenters\ClientPresenters\ClientJournalListPresenter.cs" />
+    <Compile Include="Source\Presenters\ClientPresenters\ClientMainPresenter.cs" />
+    <Compile Include="Source\Presenters\ClientPresenters\ClientMbesListPresenter.cs" />
+    <Compile Include="Source\Presenters\ClientPresenters\ClientMyConsultantBodyPresenter.cs" />
+    <Compile Include="Source\Presenters\ClientPresenters\ClientMyConsultantPresenter.cs" />
+    <Compile Include="Source\Presenters\ClientPresenters\ClientPlaylistPresenter.cs" />
+    <Compile Include="Source\Presenters\ClientPresenters\ClientViewAccelerometerPresenter.cs" />
+    <Compile Include="Source\Presenters\ClientPresenters\ClientViewBehaviorPresenter.cs" />
+    <Compile Include="Source\Presenters\ClientPresenters\ClientViewJournalPresenter.cs" />
+    <Compile Include="Source\Presenters\ClientPresenters\ClientViewResponsePresenter.cs" />
+    <Compile Include="Source\Views\Activities\ClientAccelerometerActivity.cs" />
+    <Compile Include="Source\Views\Activities\ClientCalibrateActivity.cs" />
+    <Compile Include="Source\Views\Fragments\ClientFragments\ClientAccelerometerView.cs" />
+    <Compile Include="Source\Views\Fragments\ClientFragments\ClientAccelerometerViewTest.cs" />
+    <Compile Include="Source\Views\Fragments\ClientFragments\ClientViewAccelerometerView.cs" />
+    <Compile Include="Source\Views\Fragments\ClientFragments\ClientViewResponseView.cs" />
+    <Compile Include="Source\Presenters\Common\LoginPresenter.cs" />
+    <Compile Include="Source\Presenters\Common\RegisterPresenter.cs" />
+    <Compile Include="Source\Presenters\ConsultantPresenters\ConsultantClientProfileBodyPresenter.cs" />
+    <Compile Include="Source\Presenters\ConsultantPresenters\ConsultantClientProfileHeadPresenter.cs" />
+    <Compile Include="Source\Presenters\ConsultantPresenters\ConsultantClientsPresenter.cs" />
+    <Compile Include="Source\Presenters\ConsultantPresenters\ConsultantHomeHeadPresenter.cs" />
+    <Compile Include="Source\Presenters\ConsultantPresenters\ConsultantMainPresenter.cs" />
+    <Compile Include="Source\Services\AndroidAssetService.cs" />
+    <Compile Include="Source\Services\AndroidFileService.cs" />
+    <Compile Include="Source\Services\Bluetooth\AcceptThread.cs" />
+    <Compile Include="Source\Services\Bluetooth\BluetoothDataReceiver.cs" />
+    <Compile Include="Source\Services\Bluetooth\BluetoothHandler.cs" />
+    <Compile Include="Source\Services\Bluetooth\BluetoothService.cs" />
+    <Compile Include="Source\Services\Bluetooth\ConnectedThread.cs" />
+    <Compile Include="Source\Services\Bluetooth\ConnectThread.cs" />
+    <Compile Include="Source\Services\MbesAssetService.cs" />
+    <Compile Include="Source\Session\AccountSession.cs" />
+    <Compile Include="Source\Session\ClientSession.cs" />
+    <Compile Include="Source\Session\ClientSessionLoader.cs" />
+    <Compile Include="Source\Session\ConsultantSession.cs" />
+    <Compile Include="Source\Session\AppSession.cs" />
+    <Compile Include="Source\Factories\SessionFactory.cs" />
+    <Compile Include="Source\Session\ConsultantSessionLoader.cs" />
+    <Compile Include="Source\Session\SessionKeys.cs" />
+    <Compile Include="Source\Utils\GraphicsUtil.cs" />
+    <Compile Include="Source\ViewHolders\CardBehaviorViewHolder.cs" />
+    <Compile Include="Source\ViewHolders\CardItemViewHolder.cs" />
+    <Compile Include="Source\ViewHolders\CardJournalViewHolder.cs" />
+    <Compile Include="Source\ViewHolders\CardNotificationViewHolder.cs" />
+    <Compile Include="Source\ViewHolders\CardQuestionViewHolder.cs" />
+    <Compile Include="Source\ViewHolders\CardReactiveViewHolder.cs" />
+    <Compile Include="Source\ViewHolders\CardReminderViewHolder.cs" />
+    <Compile Include="Source\Views\Activities\CheckListMainActivity.cs" />
+    <Compile Include="Source\Views\Activities\ClientBehaviorActivity.cs" />
+    <Compile Include="Source\Views\Activities\ClientJournalCreateActivity.cs" />
+    <Compile Include="Source\Views\Activities\ClientMainActivity.cs" />
+    <Compile Include="Source\Views\Activities\ConsultantMainActivity.cs" />
+    <Compile Include="Source\Views\Activities\ConsultantPendingMainActivity.cs" />
+    <Compile Include="Source\Views\Activities\HideSoftInputActivity.cs" />
+    <Compile Include="Source\Views\Activities\LoginActivity.cs" />
+    <Compile Include="Source\Views\Activities\NavigationDrawerActivity.cs" />
+    <Compile Include="Source\Views\Activities\RegisterConsultantActivity.cs" />
+    <Compile Include="Source\Views\Fragments\AdminFragments\AdminClientProfileAboutView.cs" />
+    <Compile Include="Source\Views\Fragments\AdminFragments\AdminClientProfileActivityView.cs" />
+    <Compile Include="Source\Views\Fragments\AdminFragments\AdminClientProfileSurveyView.cs" />
+    <Compile Include="Source\Views\Fragments\AdminFragments\AdminClientProfileTabView.cs" />
+    <Compile Include="Source\Views\Fragments\AdminFragments\AdminClientsView.cs" />
+    <Compile Include="Source\Views\Fragments\AdminFragments\AdminConsultantProfileAboutView.cs" />
+    <Compile Include="Source\Views\Fragments\AdminFragments\AdminConsultantProfileClientsView.cs" />
+    <Compile Include="Source\Views\Fragments\AdminFragments\AdminConsultantProfileTabView.cs" />
+    <Compile Include="Source\Views\Fragments\AdminFragments\AdminConsultantsView.cs" />
+    <Compile Include="Source\Views\Fragments\AdminFragments\AdminPendingView.cs" />
+    <Compile Include="Source\Views\Fragments\ClientFragments\ClientBehaviorView.cs" />
+    <Compile Include="Source\Views\Fragments\ClientFragments\ClientCheckListInstructionView.cs" />
+    <Compile Include="Source\Views\Fragments\ClientFragments\ClientCheckListQuestionView.cs" />
+    <Compile Include="Source\Views\Fragments\ClientFragments\ClientCreateJournalView.cs" />
+    <Compile Include="Source\Views\Fragments\ClientFragments\ClientDeviceView.cs" />
+    <Compile Include="Source\Views\Fragments\ClientFragments\ClientEntertainmentView.cs" />
+    <Compile Include="Source\Views\Fragments\ClientFragments\ClientHomeBodyView.cs" />
+    <Compile Include="Source\Views\Fragments\ClientFragments\ClientHomeHeadView.cs" />
+    <Compile Include="Source\Views\Fragments\ClientFragments\ClientHomeView.cs" />
+    <Compile Include="Source\Views\Fragments\ClientFragments\ClientJournalCreateView.cs" />
+    <Compile Include="Source\Views\Fragments\ClientFragments\ClientJournalListView.cs" />
+    <Compile Include="Source\Views\Fragments\ClientFragments\ClientJournalView.cs" />
+    <Compile Include="Source\Views\Fragments\ClientFragments\ClientMbesListView.cs" />
+    <Compile Include="Source\Views\Fragments\ClientFragments\ClientMyConsultantBodyView.cs" />
+    <Compile Include="Source\Views\Fragments\ClientFragments\ClientMyConsultantHeadView.cs" />
+    <Compile Include="Source\Views\Fragments\ClientFragments\ClientMyConsultantView.cs" />
+    <Compile Include="Source\Views\Fragments\ClientFragments\ClientPlaylistView.cs" />
+    <Compile Include="Source\Views\Fragments\ClientFragments\ClientViewBehaviorView.cs" />
+    <Compile Include="Source\Views\Fragments\ClientFragments\ClientViewJournalView.cs" />
+    <Compile Include="Source\Views\Fragments\Common\DatePickerDialogFragment.cs" />
+    <Compile Include="Source\Views\Fragments\Common\HideSoftInputFragment.cs" />
+    <Compile Include="Source\Views\Fragments\Common\LoginView.cs" />
+    <Compile Include="Source\Views\Fragments\Common\ProfileBodyView.cs" />
+    <Compile Include="Source\Views\Fragments\Common\ProfileHeadView.cs" />
+    <Compile Include="Source\Views\Fragments\Common\ProfileView.cs" />
+    <Compile Include="Source\Views\Fragments\Common\RecyclerFragment.cs" />
+    <Compile Include="Source\Views\Fragments\Common\RegisterView.cs" />
+    <Compile Include="Source\Dictionaries\NavigationItemMap.cs" />
+    <Compile Include="Resources\Resource.Designer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Source\Views\Fragments\AdminFragments\AdminHome.cs" />
+    <Compile Include="Source\Views\Fragments\ConsultantFragments\ConsultantClientProfileBodyView.cs" />
+    <Compile Include="Source\Views\Fragments\ConsultantFragments\ConsultantClientProfileHeadView.cs" />
+    <Compile Include="Source\Views\Fragments\ConsultantFragments\ConsultantClientProfileView.cs" />
+    <Compile Include="Source\Views\Fragments\ConsultantFragments\ConsultantClientsView.cs" />
+    <Compile Include="Source\Views\Fragments\ConsultantFragments\ConsultantHomeHeadView.cs" />
+    <Compile Include="Source\Views\Fragments\ConsultantFragments\ConsultantHomeView.cs" />
+    <Compile Include="Source\Views\Fragments\ConsultantFragments\ConsultantNewClientView.cs" />
+    <Compile Include="Source\Views\Interfaces\IHideSoftInput.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AboutResources.txt" />
+    <None Include="Properties\AndroidManifest.xml" />
+    <None Include="Assets\AboutAssets.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\activity_main.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\app_bar_main.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\content_main.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\nav_header_main.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\values\colors.xml" />
+    <AndroidResource Include="Resources\values\dimens.xml" />
+    <AndroidResource Include="Resources\values\drawables.xml" />
+    <AndroidResource Include="Resources\values\ic_launcher_background.xml" />
+    <AndroidResource Include="Resources\values\strings.xml" />
+    <AndroidResource Include="Resources\values\styles.xml" />
+    <AndroidResource Include="Resources\values-v21\styles.xml" />
+    <AndroidResource Include="Resources\drawable\side_nav_bar.xml" />
+    <AndroidResource Include="Resources\drawable-v21\ic_menu_camera.xml" />
+    <AndroidResource Include="Resources\drawable-v21\ic_menu_gallery.xml" />
+    <AndroidResource Include="Resources\drawable-v21\ic_menu_manage.xml" />
+    <AndroidResource Include="Resources\drawable-v21\ic_menu_send.xml" />
+    <AndroidResource Include="Resources\drawable-v21\ic_menu_share.xml" />
+    <AndroidResource Include="Resources\drawable-v21\ic_menu_slideshow.xml" />
+    <AndroidResource Include="Resources\menu\activity_main_drawer.xml" />
+    <AndroidResource Include="Resources\menu\menu_main.xml" />
+    <AndroidResource Include="Resources\mipmap-anydpi-v26\ic_launcher.xml" />
+    <AndroidResource Include="Resources\mipmap-anydpi-v26\ic_launcher_round.xml" />
+    <AndroidResource Include="Resources\mipmap-hdpi\ic_launcher.png" />
+    <AndroidResource Include="Resources\mipmap-hdpi\ic_launcher_foreground.png" />
+    <AndroidResource Include="Resources\mipmap-hdpi\ic_launcher_round.png" />
+    <AndroidResource Include="Resources\mipmap-mdpi\ic_launcher.png" />
+    <AndroidResource Include="Resources\mipmap-mdpi\ic_launcher_foreground.png" />
+    <AndroidResource Include="Resources\mipmap-mdpi\ic_launcher_round.png" />
+    <AndroidResource Include="Resources\mipmap-xhdpi\ic_launcher.png" />
+    <AndroidResource Include="Resources\mipmap-xhdpi\ic_launcher_foreground.png" />
+    <AndroidResource Include="Resources\mipmap-xhdpi\ic_launcher_round.png" />
+    <AndroidResource Include="Resources\mipmap-xxhdpi\ic_launcher.png" />
+    <AndroidResource Include="Resources\mipmap-xxhdpi\ic_launcher_foreground.png" />
+    <AndroidResource Include="Resources\mipmap-xxhdpi\ic_launcher_round.png" />
+    <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_launcher.png" />
+    <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_launcher_foreground.png" />
+    <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_launcher_round.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microcharts">
+      <Version>0.8.3-pre</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Caching.Memory">
+      <Version>3.0.0</Version>
+    </PackageReference>
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>12.0.2</Version>
+    </PackageReference>
+    <PackageReference Include="NUnit3TestAdapter">
+      <Version>3.13.0</Version>
+    </PackageReference>
+    <PackageReference Include="System.Buffers">
+      <Version>4.5.0</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Android.Support.Design" Version="27.0.2.1" />
+    <PackageReference Include="Xamarin.Android.Support.v7.CardView">
+      <Version>27.0.2.1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Android.Support.v7.RecyclerView">
+      <Version>27.0.2.1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.RecyclerView.Animators">
+      <Version>2.3.1</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\frame_layout_main.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\admin_frag_home.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Credits.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PeriwinkleApp.Core\PeriwinkleApp.Core.csproj">
+      <Project>{670cec1d-4b54-47d2-8514-68700d5da9da}</Project>
+      <Name>PeriwinkleApp.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\card_view_item.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\avatar_female.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\avatar_male.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\avatar_female.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\avatar_male.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\avatar_male.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\list_frag_generic.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\profile_frag.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\profile_head_frag.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\profile_body_frag.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\admin_client_profile_tab.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\admin_client_profile_about.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\admin_client_profile_activity.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\admin_client_profile_survey.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\textview_dialog_title.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\admin_consultant_profile_about.axml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\admin_consultant_profile_tab.axml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\admin_consultant_profile_clients.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\menu\client_main_drawer.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\activity_client_main.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\client_frag_journal_create.axml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\client_frag_home.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\client_frag_device.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\client_frag_behavior.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\client_frag_journal.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\client_frag_myconsultant.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\login.axml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\register.axml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\activity_consultant_main.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\menu\consul_main_drawer.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\client_frag_home_head.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\consultant_frag_home.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\consultant_frag_new.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\consultant_frag_clients.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\cover_default.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\default_cover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Mbes.xml">
+      <SubType>Designer</SubType>
+    </AndroidAsset>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\client_checklist_question.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\card_view_question.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\card_view_notif_reminder.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\card_view_notif_reactive.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\consultant_frag_home_head.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\consultant_frag_pending_home.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\client_frag_entertainment.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\values-fil\strings.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\consultant_frag_cliprofile.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\card_view_bhv_graph.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\client_frag_view_behavior.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\card_view_journal.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\client_frag_journal_creates.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\client_frag_journal_view.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\card_view_notification.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\register_view.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\register_fragment_layout.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\client_checklist_instructions.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\client_checklist_activity.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\alert_loading.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\card_view_response.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\client_view_response_scores.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\client_frag_calibrate.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\client_frag_accelerometer.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\client_frag_accel.axml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+    Other similar extension points exist, see Microsoft.Common.targets.
+    <Target Name="BeforeBuild">
+    </Target>
+    <Target Name="AfterBuild">
+    </Target>
+  -->
+</Project>

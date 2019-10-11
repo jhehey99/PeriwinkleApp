@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:tools="http://schemas.android.com/tools"
+      tools:showIn="navigation_view">
+
+	<!--TODO: UPDATE UNG MGA ICONS-->
+	
+	<group android:checkableBehavior="single">
+		<item
+			android:id="@+id/con_menu_home"
+			android:icon="@drawable/ic_menu_camera"
+			android:title="@string/con_menu_home_title" />
+		<item
+			android:id="@+id/con_menu_new"
+			android:icon="@drawable/ic_menu_gallery"
+			android:title="@string/con_menu_new_title" />
+		<item
+			android:id="@+id/con_menu_clients"
+			android:icon="@drawable/ic_menu_slideshow"
+			android:title="@string/con_menu_clients_title" />
+	</group>
+
+	<item android:title="Account">
+		<menu>
+			<item
+				android:id="@+id/menu_nav_logout"
+				android:icon="@drawable/ic_menu_share"
+				android:title="@string/menu_logout_title" />
+		</menu>
+	</item>
+</menu>

@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{670CEC1D-4B54-47D2-8514-68700D5DA9DA}</ProjectGuid>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PeriwinkleApp.Core</RootNamespace>
+    <AssemblyName>PeriwinkleApp.Core</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <AndroidResgenFile>Resources\Resource.Designer.cs</AndroidResgenFile>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <TargetFrameworkVersion>v8.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Extensions.Caching.Abstractions, Version=3.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Caching.Abstractions.3.0.0\lib\netstandard2.0\Microsoft.Extensions.Caching.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Caching.Memory, Version=3.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Caching.Memory.3.0.0\lib\netstandard2.0\Microsoft.Extensions.Caching.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=3.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.Abstractions.3.0.0\lib\netstandard2.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions, Version=3.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Logging.Abstractions.3.0.0\lib\netstandard2.0\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Options, Version=3.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Options.3.0.0\lib\netstandard2.0\Microsoft.Extensions.Options.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Primitives, Version=3.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Primitives.3.0.0\lib\netstandard2.0\Microsoft.Extensions.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Android" />
+    <Reference Include="mscorlib" />
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\netstandard2.0\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.0\lib\netstandard2.0\System.Buffers.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.3\lib\netstandard2.0\System.Memory.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.6.0\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Resources\Resource.Designer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sources\CommonInterfaces\IDebugString.cs" />
+    <Compile Include="Sources\Crypto\BCrypt.cs" />
+    <Compile Include="Sources\Exceptions\InputValidationException.cs" />
+    <Compile Include="Sources\Exceptions\PeriwinkleException.cs" />
+    <Compile Include="Sources\Exceptions\RequestFailedException.cs" />
+    <Compile Include="Sources\Extensions\AccountExtensions.cs" />
+    <Compile Include="Sources\Extensions\ApiUri.cs" />
+    <Compile Include="Sources\Extensions\ApiUriExtension.cs" />
+    <Compile Include="Sources\Extensions\ApiUriExtension.Constructor.cs" />
+    <Compile Include="Sources\Extensions\BasicEntryExtension.cs" />
+    <Compile Include="Sources\Extensions\JsonExtension.cs" />
+    <Compile Include="Sources\Extensions\EncodingExtension.cs" />
+    <Compile Include="Sources\Models\Bridge\ConsultantClient.cs" />
+    <Compile Include="Sources\Models\Common\BasicEntry.cs" />
+    <Compile Include="Sources\Models\Common\ChartStat.cs" />
+    <Compile Include="Sources\Models\Common\FrequencyEntry.cs" />
+    <Compile Include="Sources\Models\Domain\AccelerometerRecord.cs" />
+    <Compile Include="Sources\Models\Domain\Account.cs" />
+    <Compile Include="Sources\Models\Domain\AccountType.cs" />
+    <Compile Include="Sources\Models\Domain\BehaviorGraph.cs" />
+    <Compile Include="Sources\Models\Domain\Client.cs" />
+    <Compile Include="Sources\Models\Domain\Consultant.cs" />
+    <Compile Include="Sources\Models\Domain\Image64.cs" />
+    <Compile Include="Sources\Models\Domain\JournalEntry.cs" />
+    <Compile Include="Sources\Models\Domain\Mbes.cs" />
+    <Compile Include="Sources\Models\Domain\MbesResponse.cs" />
+    <Compile Include="Sources\Models\Domain\Password.cs" />
+    <Compile Include="Sources\Models\Domain\PendingConsultant.cs" />
+    <Compile Include="Sources\Models\Bridge\UsernamePassword.cs" />
+    <Compile Include="Sources\Models\Response\ApiResponse.cs" />
+    <Compile Include="Sources\Models\Response\ApiResponseCode.cs" />
+    <Compile Include="Sources\Services\AccountService.cs" />
+    <Compile Include="Sources\Services\ConnectionService.cs" />
+    <Compile Include="Sources\Services\FileService.cs" />
+    <Compile Include="Sources\Services\MbesService.cs" />
+    <Compile Include="Sources\Services\ClientService.cs" />
+    <Compile Include="Sources\Services\ConsultantService.cs" />
+    <Compile Include="Sources\Services\HashService.cs" />
+    <Compile Include="Sources\Services\HttpService.cs" />
+    <Compile Include="Sources\Services\InputValidationService.cs" />
+    <Compile Include="Sources\Services\Interfaces\IAccountService.cs" />
+    <Compile Include="Sources\Services\Interfaces\IMbesService.cs" />
+    <Compile Include="Sources\Services\Interfaces\IClientService.cs" />
+    <Compile Include="Sources\Services\Interfaces\IConsultantService.cs" />
+    <Compile Include="Sources\Services\Interfaces\IHashService.cs" />
+    <Compile Include="Sources\Services\Interfaces\IInputValidationService.cs" />
+    <Compile Include="Sources\Services\Interfaces\IPasswordService.cs" />
+    <Compile Include="Sources\Services\Interfaces\IXmlService.cs" />
+    <Compile Include="Sources\Services\JournalService.cs" />
+    <Compile Include="Sources\Services\PasswordService.cs" />
+    <Compile Include="Sources\Services\PeriwinkleHttpService.cs" />
+    <Compile Include="Sources\Services\StatisticsService.cs" />
+    <Compile Include="Sources\Services\XmlService.cs" />
+    <Compile Include="Sources\Utils\BoolConverter.cs" />
+    <Compile Include="Sources\Utils\FloatUtils.cs" />
+    <Compile Include="Sources\Utils\Logger.cs" />
+    <Compile Include="Sources\Utils\TestRepository.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Values\Strings.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="_TODO.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+         Other similar extension points exist, see Microsoft.Common.targets.
+    <Target Name="BeforeBuild">
+    </Target>
+    <Target Name="AfterBuild">
+    </Target>
+    -->
+</Project>

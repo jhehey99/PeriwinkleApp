@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:id="@+id/list_frag_gen_linear"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+		    android:id="@+id/list_frag_gen_recyclerView"
+		    android:scrollbars="vertical"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_alignParentTop="true"
+            android:clipToPadding="false"
+            android:layout_marginTop="10dp"
+            android:paddingBottom="60dp"/>
+
+        <ProgressBar
+            android:id="@+id/list_frag_gen_progress"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="visible" />
+
+	    <android.support.design.widget.FloatingActionButton
+		    android:id="@+id/list_frag_gen_fab"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            app:srcCompat="@android:drawable/ic_dialog_email"
+            app:elevation="4dp"
+            android:layout_marginBottom="76dp"
+            android:layout_marginRight="16dp"
+		    android:visibility="visible" />
+    </RelativeLayout>
+
+</LinearLayout>

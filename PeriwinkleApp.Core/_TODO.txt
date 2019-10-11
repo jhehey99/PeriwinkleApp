@@ -1,0 +1,26 @@
+
+[x] Client Registration
+[x] Client and Consultant Password Registration Test
+[x] Consultant to Pending Consultants
+Consultant to Client Relationship
+Get Consultant and Client vice versa
+Admin Functionality
+All Users Login
+Admin View Clients, Pending Consultants
+Admin Accept Pending Consultants
+Admin View Registered Consultants
+Client Journal
+Questionnarie Sample
+Spotify Http API
+
+Consultants Service - Accept, Reject Consultant Registration
+Journal Create and Etc.
+
+FTP ng Files
+ - Graph data (csv)
+ - Journal images (.jpg/.png/etc)
+
+TODO
+ung other consultant by username and by client id then login na tayo
+
+VALIDATE PENDING CONSULTANT BY USERNAME

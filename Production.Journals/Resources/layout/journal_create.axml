@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+	<EditText
+		android:id="@+id/txt_create_journal_title"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginHorizontal="10dp"
+		android:layout_marginVertical="10dp"
+		android:hint="Enter title" />
+
+	<EditText
+		android:id="@+id/txt_create_journal_body"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:lines="10"
+		android:gravity="top"
+		android:hint="Write something here"
+		android:background="@null"
+		android:scrollbars="vertical"
+		android:layout_marginHorizontal="15dp"
+		android:layout_marginBottom="10dp"
+		android:inputType="textMultiLine" />
+
+	<ImageView
+		android:id="@+id/img_create_journal"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:scaleType="centerCrop" />
+
+	<Button
+		android:id="@+id/btn_upload_image"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginHorizontal="15dp"
+		android:text="Upload From Gallery" />
+	<Button
+		android:id="@+id/btn_create_journal"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginHorizontal="15dp"
+		android:text="Create" />
+
+</LinearLayout>

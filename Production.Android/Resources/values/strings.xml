@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Production.Android</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_settings">Settings</string>
+	<string name="gallery_title">Gallery</string>
+	<string name="manage_title">Manage</string>
+</resources>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+	<!--TODO: UPDATE UNG MGA ICONS-->
+	
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/cli_menu_home"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="@string/cli_menu_home_title" />
+        <item
+            android:id="@+id/cli_menu_device"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="@string/cli_menu_device_title" />
+        <item
+            android:id="@+id/cli_menu_behavior"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="@string/cli_menu_behavior_title" />
+        <item
+            android:id="@+id/cli_menu_accelerometer"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="@string/cli_menu_accelerometer_title" />
+        <item
+            android:id="@+id/cli_menu_journal"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="@string/cli_menu_journal_title" />
+	      <item
+		      android:id="@+id/cli_menu_consultant"
+		      android:icon="@drawable/ic_menu_manage"
+		      android:title="@string/cli_menu_consultant_title" />
+
+        <item
+          android:id="@+id/cli_menu_entertainment"
+          android:icon="@drawable/ic_menu_manage"
+          android:title="@string/cli_menu_entertainment_title" />
+
+    </group>
+
+    <item android:title="Account">
+        <menu>
+            <item
+                android:id="@+id/menu_nav_logout"
+                android:icon="@drawable/ic_menu_share"
+                android:title="@string/menu_logout_title" />
+        </menu>
+    </item>
+</menu>

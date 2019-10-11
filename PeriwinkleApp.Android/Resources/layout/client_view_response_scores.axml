@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+		android:layout_marginTop="30dp"
+		android:layout_marginHorizontal="30dp"
+        android:orientation="horizontal">
+	    <TextView
+		    android:layout_width="0dp"
+		    android:layout_height="wrap_content"
+            android:layout_weight="0.7"
+		    android:text="Date of Response: "
+		    android:textColor="#4689C8"
+		    android:textSize="20dp"/>
+         <TextView
+            android:id="@+id/score_date"
+		    android:layout_width="0dp"
+		    android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+		    android:text="01/22/19 "
+		    android:textColor="#4689C8"
+            android:background="#c8e8ed"
+            android:textAlignment="center"
+		    android:textSize="20dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+		android:layout_marginTop="20dp"
+		android:layout_marginHorizontal="30dp"
+        android:orientation="horizontal">
+	    <TextView
+		    android:layout_width="0dp"
+		    android:layout_height="wrap_content"
+            android:layout_weight="0.7"
+		    android:text="Height: "
+		    android:textColor="#4689C8"
+		    android:textSize="20dp"/>
+         <TextView
+            android:id="@+id/score_height"
+		    android:layout_width="0dp"
+		    android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+		    android:text="169cm "
+		    android:textColor="#4689C8"
+            android:background="#c8e8ed"
+            android:textAlignment="center"
+		    android:textSize="20dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+		android:layout_marginTop="20dp"
+		android:layout_marginHorizontal="30dp"
+        android:orientation="horizontal">
+	    <TextView
+		    android:layout_width="0dp"
+		    android:layout_height="wrap_content"
+            android:layout_weight="0.7"
+		    android:text="Weight: "
+		    android:textColor="#4689C8"
+		    android:textSize="20dp"/>
+         <TextView
+            android:id="@+id/score_weight"
+		    android:layout_width="0dp"
+		    android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+		    android:text="69kg "
+		    android:textColor="#4689C8"
+            android:background="#c8e8ed"
+            android:textAlignment="center"
+		    android:textSize="20dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+		android:layout_marginTop="20dp"
+		android:layout_marginHorizontal="30dp"
+        android:orientation="horizontal">
+	    <TextView
+		    android:layout_width="0dp"
+		    android:layout_height="wrap_content"
+            android:layout_weight="0.7"
+		    android:text="BMI: "
+		    android:textColor="#4689C8"
+		    android:textSize="20dp"/>
+         <TextView
+            android:id="@+id/score_bmi"
+		    android:layout_width="0dp"
+		    android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+		    android:text="69 "
+		    android:textColor="#4689C8"
+            android:background="#c8e8ed"
+            android:textAlignment="center"
+		    android:textSize="20dp"/>
+    </LinearLayout>
+
+
+    <TextView
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="30dp"
+		android:layout_marginHorizontal="30dp"
+		android:text="MBES-21 Response Average Scores"
+		android:textColor="#4689C8"
+		android:textSize="20dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+		android:layout_marginTop="20dp"
+		android:layout_marginHorizontal="30dp"
+        android:orientation="horizontal">
+	    <TextView
+		    android:layout_width="0dp"
+		    android:layout_height="wrap_content"
+            android:layout_weight="0.7"
+		    android:text="Binge Eating: "
+		    android:textColor="#4689C8"
+		    android:textSize="20dp"/>
+         <TextView
+            android:id="@+id/score_binge"
+		    android:layout_width="0dp"
+		    android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+		    android:text="23.45"
+		    android:textColor="#4689C8"
+            android:background="#c8e8ed"
+            android:textAlignment="center"
+		    android:textSize="20dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+		android:layout_marginTop="20dp"
+		android:layout_marginHorizontal="30dp"
+        android:orientation="horizontal">
+	    <TextView
+		    android:layout_width="0dp"
+		    android:layout_height="wrap_content"
+            android:layout_weight="0.7"
+		    android:text="Bulimia Nervosa: "
+		    android:textColor="#4689C8"
+		    android:textSize="20dp"/>
+         <TextView
+            android:id="@+id/score_bulimia"
+		    android:layout_width="0dp"
+		    android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+		    android:text="23.45"
+            android:background="#c8e8ed"
+		    android:textColor="#4689C8"
+            android:textAlignment="center"
+		    android:textSize="20dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+		android:layout_marginTop="20dp"
+		android:layout_marginHorizontal="30dp"
+        android:orientation="horizontal">
+	    <TextView
+		    android:layout_width="0dp"
+		    android:layout_height="wrap_content"
+            android:layout_weight="0.7"
+		    android:text="Anorexia Nervosa: "
+		    android:textColor="#4689C8"
+		    android:textSize="20dp"/>
+         <TextView
+            android:id="@+id/score_anorexia"
+		    android:layout_width="0dp"
+		    android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+		    android:text="23.45"
+		    android:textColor="#4689C8"
+            android:background="#c8e8ed"
+            android:textAlignment="center"
+		    android:textSize="20dp"/>
+    </LinearLayout>
+
+</LinearLayout>

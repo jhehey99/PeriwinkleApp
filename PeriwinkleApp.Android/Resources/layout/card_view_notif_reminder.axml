@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+		xmlns:card_view="http://schemas.android.com/apk/res-auto"
+		xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+	<android.support.v7.widget.CardView
+		android:layout_width="match_parent"
+		android:layout_height="140dp"
+		android:layout_gravity="center"
+		card_view:cardElevation="5dp"
+		card_view:cardUseCompatPadding="true"
+		card_view:cardCornerRadius="5dp" >
+
+		<RelativeLayout 
+			android:layout_width="match_parent"
+			android:layout_height="match_parent" 
+			android:orientation="vertical">
+
+			<TextView
+				android:id="@+id/card_view_notif_rmn_ttl"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:text="Insert Title Here"
+				android:textColor="#4689C8"
+				android:textSize="20dp"
+				android:layout_marginLeft="20dp"
+				android:layout_marginTop="12dp" />
+
+			<TextView
+				android:id="@+id/card_view_notif_rmn_msg"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:text="In the past 3 months, I have been using laxatives and diuretics every after eating a large amount of meal."
+				android:textColor="#000000"
+				android:textSize="16dp"
+				android:layout_gravity="center_vertical"
+				android:layout_marginLeft="30dp"
+				android:padding="10dp"
+				android:layout_below="@id/card_view_notif_rmn_ttl"/>
+				
+		</RelativeLayout>
+	</android.support.v7.widget.CardView>
+</LinearLayout>

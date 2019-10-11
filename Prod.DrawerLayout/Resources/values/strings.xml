@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Prod.DrawerLayout</string>
+	<string name="action_settings">Settings</string>
+
+	<!--menu_drawer.xml Strings-->
+	<string name="gallery">Gallery</string>
+	<string name="slideshow">Slideshow</string>
+	<string name="tools">Tools</string>
+
+</resources>

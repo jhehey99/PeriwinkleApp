@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MbesForm>
+	<Instructions>
+		<Instruction id="0">This is a 21-item checklist which measures if the person has signs and symptoms of binge- eating, bulimia nervosa, and anorexia nervosa. The factors included in the scale are the aforementioned eating disorders. The items were based on the symptoms of binge- eating disorder, anorexia nervosa, and bulimia nervosa from the Diagnostic Statistical Manual, Fifth Edition.</Instruction>
+		<Instruction id="1">Please fill out the below form by checking the box as accurately, honestly and completely as possible. There are no right or wrong answers. Do not respond the way you used to be or the way you would like to be. Do not leave any questions blank. All of your responses are confidential.</Instruction>
+	</Instructions>
+	<Questions>
+		<Question id="0">I believe that eating will make me gain weight.</Question>
+		<Question id="1">I eat large amounts of food every meal.</Question>
+		<Question id="2">I have been using laxatives after eating a large amount of meals.</Question>
+		<Question id="3">I force myself to vomit every time I eat a large amount of meals.</Question>
+		<Question id="4">I believe that eating will destroy my body.</Question>
+		<Question id="5">I feel that it is too much if I eat dessert.</Question>
+		<Question id="6">I exercise a lot in order to lose weight.</Question>
+		<Question id="7">I am the last one to eat during breakfast, lunch and dinner because I eat too many.</Question>
+		<Question id="8">I usually go for another round whenever I am eating.</Question>
+		<Question id="9">I think that it would be better for me to not gain weight.</Question>
+		<Question id="10">I eat until I am uncomfortably full.</Question>
+		<Question id="11">I am unconscious of what I am eating because I know that my laxatives are available.</Question>
+		<Question id="12">I force myself to go to the bathroom every after meal.</Question>
+		<Question id="13">I keep weighing myself despite my avoidance of eating food.</Question>
+		<Question id="14">I eat large amount of foods even if I am not hungry.</Question>
+		<Question id="15">I feel satisfied when I eat large amount of food.</Question>
+		<Question id="16">I use tape measure to ensure that my body shape will remain the same every after meal.</Question>
+		<Question id="17">I use laxatives even though I did not eat.</Question>
+		<Question id="18">In the past 3 months, I have gone eating binges for more than 2 hours.</Question>
+		<Question id="19">In the past 3 months, I have been checking the calorie contents of my food before eating.</Question>
+		<Question id="20">In the past 3 months, I have been using laxatives and diuretics every after eating a large amount of meal.</Question>
+	</Questions>
+</MbesForm>

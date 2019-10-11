@@ -1,0 +1,50 @@
+<resources>
+    <string name="app_name">Periwinkle App</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_settings">Settings</string>
+	
+	<!--Admin.axml-->
+	<string name="menu_home_title">Tahanan</string>
+	<string name="menu_cli_title">Kliyente</string>
+	<string name="menu_con_title">Kasangguni</string>
+	<string name="menu_pend_title">Nakabinbing Kasangguni</string>
+	<string name="menu_logout_title">Mag-log out</string>
+
+	<!--AdminPendingView.cs-->
+	<string name="pending_confirm_msg">Confirm Registration?</string>
+	<string name="pending_accept">Accept</string>
+	<string name="pending_reject">Reject</string>
+	<string name="pending_cancel">Cancel</string>
+
+	<!--Client-->
+	<string name="cli_menu_home_title">Tahanan</string>
+	<string name="cli_menu_device_title">Aparato</string>
+	<string name="cli_menu_behavior_title">Pag-uugali</string>
+  <string name="cli_menu_accelerometer_title">Accelerometer</string>
+  <string name="cli_menu_journal_title">Talaarawanan</string>
+  <string name="cli_menu_consultant_title">Aking Kasangguni</string>
+  <string name="cli_menu_entertainment_title">Libangan</string>
+
+  <!--Consultant-->
+	<string name="con_menu_home_title">Tahanan</string>
+	<string name="con_menu_new_title">Bagong Kliyente</string>
+	<string name="con_menu_clients_title">Aking Kliyente</string>
+
+	<!--Para sa Spinner sa Registration-->
+	<string-array name="gender">
+		<item>Lalake</item>
+		<item>Babae</item>
+	</string-array>
+
+	<string-array name="scale">
+		<item>0</item>
+		<item>1</item>
+		<item>2</item>
+		<item>3</item>
+		<item>4</item>
+		<item>5</item>
+		<item>6</item>
+	</string-array>
+
+</resources>
