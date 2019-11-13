@@ -57,12 +57,26 @@ namespace PeriwinkleApp.Core.Test.Generator
 			}
         }
 
+		[Test]
+		public void GenerateAdmin()
+		{
+			InitServices();
+			IAccountService service = new AccountService();
+			Account account = TestRepository.GetAccount("admin", AccountType.Admin);
+			var task = service.RegisterAccount(account);
+			task.Wait();
+			var res = task.Result;
+			Assert.True(res.Select(r => r.Code == ApiResponseCode.RegisterSuccess).FirstOrDefault());
+
+			string username = account.Username;
+			RegisterPassword(username);
+		}
 
 
 
-#region Generator Functions
+		#region Generator Functions
 
-        public void InitServices()
+		public void InitServices()
 		{
 			conService = new ConsultantService();
 			cliService = new ClientService();

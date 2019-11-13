@@ -6,10 +6,11 @@
         EmailTaken = 911,
         ContactTaken = 912,
         LicenseTaken = 913,
-        RegisterFailed = 980,
-        UpdateFailed = 981,
-        LoginFailed = 982,
         RegisterSuccess = 990,
-        UpdateSuccess = 991
-    }
+		RegisterFailed = 980,
+		UpdateSuccess = 991,
+		UpdateFailed = 981,
+		UploadSuccess = 992,
+		UploadFailed = 982
+	}
 }

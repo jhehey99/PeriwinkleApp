@@ -62,7 +62,7 @@
 					android:textColor="@android:color/white"
 					android:background="#FF8A65"
 					android:layout_marginTop="10dp"
-					android:layout_marginHorizontal="10dp" />
+					android:layout_marginHorizontal="20dp" />
 				
 			</LinearLayout>
 		</RelativeLayout>

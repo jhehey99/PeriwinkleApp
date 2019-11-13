@@ -11,6 +11,10 @@
             android:icon="@drawable/ic_menu_camera"
             android:title="@string/cli_menu_home_title" />
         <item
+            android:id="@+id/cli_menu_record"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="@string/cli_menu_record_title" />
+        <item
             android:id="@+id/cli_menu_device"
             android:icon="@drawable/ic_menu_gallery"
             android:title="@string/cli_menu_device_title" />

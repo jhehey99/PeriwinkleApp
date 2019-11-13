@@ -18,8 +18,9 @@
 	<string name="pending_cancel">Cancel</string>
 
 	<!--Client-->
-	<string name="cli_menu_home_title">Tahanan</string>
-	<string name="cli_menu_device_title">Aparato</string>
+  <string name="cli_menu_home_title">Tahanan</string>
+  <string name="cli_menu_record_title">Rekord</string>
+  <string name="cli_menu_device_title">Aparato</string>
 	<string name="cli_menu_behavior_title">Pag-uugali</string>
   <string name="cli_menu_accelerometer_title">Accelerometer</string>
   <string name="cli_menu_journal_title">Talaarawanan</string>

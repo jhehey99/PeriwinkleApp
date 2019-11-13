@@ -69,6 +69,7 @@
     <Compile Include="Source\AdapterModels\ReactiveAdapterModel.cs" />
     <Compile Include="Source\AdapterModels\ReminderAdapterModel.cs" />
     <Compile Include="Source\AdapterModels\ResponseAdapterModel.cs" />
+    <Compile Include="Source\AdapterModels\SensorRecordAdapterModel.cs" />
     <Compile Include="Source\Adapters\AccountRecyclerAdapter.cs" />
     <Compile Include="Source\Adapters\AdminClientPageAdapter.cs" />
     <Compile Include="Source\Adapters\AdminConsultantPageAdapter.cs" />
@@ -80,6 +81,7 @@
     <Compile Include="Source\Adapters\ReactiveRecyclerAdapter.cs" />
     <Compile Include="Source\Adapters\ReminderRecyclerAdapter.cs" />
     <Compile Include="Source\Adapters\ResponseRecyclerAdapter.cs" />
+    <Compile Include="Source\Adapters\SensorRecordRecyclerAdapter.cs" />
     <Compile Include="Source\Cache\CacheProvider.cs" />
     <Compile Include="Source\DiffUtils\AccountDiffCallback.cs" />
     <Compile Include="Source\DiffUtils\DiffCallback.cs" />
@@ -92,6 +94,7 @@
     <Compile Include="Source\Presenters\AdminPresenters\AdminConsultantProfileAboutPresenter.cs" />
     <Compile Include="Source\Presenters\AdminPresenters\AdminConsultantProfileClientsPresenter.cs" />
     <Compile Include="Source\Presenters\AdminPresenters\AdminConsultantsPresenter.cs" />
+    <Compile Include="Source\Presenters\AdminPresenters\AdminMainPresenter.cs" />
     <Compile Include="Source\Presenters\AdminPresenters\AdminPendingPresenter.cs" />
     <Compile Include="Source\Presenters\ClientPresenters\ClientAccelerometerListPresenter.cs" />
     <Compile Include="Source\Presenters\ClientPresenters\ClientAccelerometerPresenter.cs" />
@@ -112,12 +115,18 @@
     <Compile Include="Source\Presenters\ClientPresenters\ClientViewAccelerometerPresenter.cs" />
     <Compile Include="Source\Presenters\ClientPresenters\ClientViewBehaviorPresenter.cs" />
     <Compile Include="Source\Presenters\ClientPresenters\ClientViewJournalPresenter.cs" />
+    <Compile Include="Source\Presenters\ClientPresenters\ClientViewRecordsListPresenter.cs" />
     <Compile Include="Source\Presenters\ClientPresenters\ClientViewResponsePresenter.cs" />
+    <Compile Include="Source\ViewHolders\CardSensorRecordViewHolder.cs" />
+    <Compile Include="Source\Views\Activities\AdminMainActivity.cs" />
     <Compile Include="Source\Views\Activities\ClientAccelerometerActivity.cs" />
     <Compile Include="Source\Views\Activities\ClientCalibrateActivity.cs" />
+    <Compile Include="Source\Views\Activities\ClientNewRecordActivity.cs" />
     <Compile Include="Source\Views\Fragments\ClientFragments\ClientAccelerometerView.cs" />
     <Compile Include="Source\Views\Fragments\ClientFragments\ClientAccelerometerViewTest.cs" />
+    <Compile Include="Source\Views\Fragments\ClientFragments\ClientRecordView.cs" />
     <Compile Include="Source\Views\Fragments\ClientFragments\ClientViewAccelerometerView.cs" />
+    <Compile Include="Source\Views\Fragments\ClientFragments\ClientViewRecordsListView.cs" />
     <Compile Include="Source\Views\Fragments\ClientFragments\ClientViewResponseView.cs" />
     <Compile Include="Source\Presenters\Common\LoginPresenter.cs" />
     <Compile Include="Source\Presenters\Common\RegisterPresenter.cs" />
@@ -190,6 +199,7 @@
     <Compile Include="Source\Views\Fragments\ClientFragments\ClientPlaylistView.cs" />
     <Compile Include="Source\Views\Fragments\ClientFragments\ClientViewBehaviorView.cs" />
     <Compile Include="Source\Views\Fragments\ClientFragments\ClientViewJournalView.cs" />
+    <Compile Include="Source\Views\Fragments\ClientFragments\ClientViewSensorRecordView.cs" />
     <Compile Include="Source\Views\Fragments\Common\DatePickerDialogFragment.cs" />
     <Compile Include="Source\Views\Fragments\Common\HideSoftInputFragment.cs" />
     <Compile Include="Source\Views\Fragments\Common\LoginView.cs" />
@@ -607,6 +617,29 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\client_frag_accel.axml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\client_frag_record.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\card_view_sensor_record.axml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\activity_admin_main.axml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\menu\admin_main_drawer.xml">
       <Generator>MSBuild:UpdateGeneratedFiles</Generator>
       <SubType>Designer</SubType>
     </AndroidResource>

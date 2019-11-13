@@ -34,13 +34,6 @@ namespace PeriwinkleApp.Android.Source.Presenters.AdminPresenters
 
             protected set
             {
-                // pag magkaiba ng count palitan na or pag may atleast isang item na magkaiba, palitan narin.  TODO Optimize
-                bool shouldDisplay = (Clients.Count != value.Count) ||
-                                     value.Where((t, i) => !Clients[i].Equals(t)).Any();
-
-                if (!shouldDisplay) return;
-
-                // update ung value and display ulit 
                 clients = value;
                 view.DisplayClientsList(clients.ToListAccountAdapterModel());
             }
@@ -48,7 +41,6 @@ namespace PeriwinkleApp.Android.Source.Presenters.AdminPresenters
 
         public async Task GetAllClientsAsync()
         {
-            // kunin natin ung list ng clients
             Clients = await clientService.GetAllClients();
         }
     }

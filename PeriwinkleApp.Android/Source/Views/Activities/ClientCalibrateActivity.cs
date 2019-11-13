@@ -18,7 +18,7 @@ using PeriwinkleApp.Core.Sources.Utils;
 namespace PeriwinkleApp.Android.Source.Views.Activities
 {
 	// [Activity(Label = "@string/app_name", Theme = "@style/AppTheme.NoActionBar", MainLauncher = true)]
-	[Activity(Label = "@string/app_name", MainLauncher = true)]
+	[Activity(Label = "@string/app_name", MainLauncher = false)]
 	public class ClientCalibrateActivity : Activity, IMessageReceiver
 	{
 		private Button btnCalibrate, btnStart;

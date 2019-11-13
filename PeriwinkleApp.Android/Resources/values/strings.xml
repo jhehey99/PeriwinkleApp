@@ -18,8 +18,9 @@
 	<string name="pending_cancel">Cancel</string>
 
 	<!--Client-->
-	<string name="cli_menu_home_title">Home</string>
-	<string name="cli_menu_device_title">Response</string>
+  <string name="cli_menu_home_title">Home</string>
+  <string name="cli_menu_record_title">Record</string>
+  <string name="cli_menu_device_title">Response</string>
   <string name="cli_menu_behavior_title">Behavior</string>
   <string name="cli_menu_accelerometer_title">Accelerometer</string>
   <string name="cli_menu_journal_title">Journal</string>

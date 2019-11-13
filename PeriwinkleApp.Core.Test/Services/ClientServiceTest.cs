@@ -94,7 +94,7 @@ namespace PeriwinkleApp.Core.Test.Services
             Assert.That (clients.First().GetType () == typeof(Client));
         }
 
-        [Test]
+        //[Test]
         public void GetClientByUsernameTest ()
         {
             // deserialize JSON directly from a file
@@ -114,7 +114,7 @@ namespace PeriwinkleApp.Core.Test.Services
             Assert.True (realClient.Equals (getClient));
         }
 
-        [Test]
+        //[Test]
         public void GetClientsByClientIdTest ()
         {
             IClientService clientService = new ClientService ();

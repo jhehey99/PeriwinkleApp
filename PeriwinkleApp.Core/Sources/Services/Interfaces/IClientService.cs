@@ -31,5 +31,8 @@ namespace PeriwinkleApp.Core.Sources.Services.Interfaces
 
 		Task<List<ApiResponse>> AddAccelerometerRecord(AccelerometerRecord record);
 		Task<List<AccelerometerRecord>> GetAccelerometerRecordByClientId(int? clientId);
+
+		Task<List<ApiResponse>> AddSensorRecord(SensorRecord record);
+		Task<List<SensorRecord>> GetSensorRecordByClientId(int? clientId);
 	}
 }

@@ -55,7 +55,10 @@ namespace PeriwinkleApp.Android.Source.Presenters.ClientPresenters
 			mbes = await mbesService.GetMbesByClientId(loggedClient.ClientId.Value);
 
 			if (mbes == null)
+			{
+				view.DisplayResponses(null);
 				return;
+			}
 
 			List<ResponseAdapterModel> dataSet =
 				mbes.Select((t, i) => new ResponseAdapterModel()

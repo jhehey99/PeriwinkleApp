@@ -72,7 +72,7 @@ namespace PeriwinkleApp.Core.Test.Services
             Assert.That (consultants.First().GetType () == typeof(Consultant));
         }
 
-        [Test]
+        //[Test]
         public void GetConsultantByUsernameSuccessTest ()
         {
             // deserialize JSON directly from a file
@@ -88,7 +88,7 @@ namespace PeriwinkleApp.Core.Test.Services
             Assert.True (realConsultant.Equals (getConsultant));
         }
 
-        [Test]
+        //[Test]
         public void GetConsultantByClientIdSuccessTest ()
         {
             // deserialize JSON directly from a file

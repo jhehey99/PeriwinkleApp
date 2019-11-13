@@ -64,7 +64,7 @@ namespace PeriwinkleApp.Core.Test.Services
 		public void AccelerometerRecordFileWithHttpTest()
 		{
 			FileService fileService = new FileService(FileDirectory.Accelerometer);
-			string filename = "accell2.par";
+			string filename = "accell4.par";
 			string content = "Hello sa mama mo acceleration ng papa mo";
 
 			string url = ApiUri.AddAccelerometerRecord.ToUrl();

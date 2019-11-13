@@ -118,13 +118,14 @@ namespace PeriwinkleApp.Android.Source.Views.Fragments.Common
             switch (type)
             {
                 case AccountType.Admin:
-                    throw new System.NotImplementedException();
+					intent = new Intent(Context, typeof(AdminMainActivity));
+					break;
 
                 case AccountType.Client:
                     intent = new Intent(Context, typeof(ClientMainActivity));
                     break;
-                    
-                case AccountType.Consultant:
+
+				case AccountType.Consultant:
                     intent = new Intent(Context, typeof(ConsultantMainActivity));
                     break;
                     //TODO NOT IMPLEMENTED TO HA

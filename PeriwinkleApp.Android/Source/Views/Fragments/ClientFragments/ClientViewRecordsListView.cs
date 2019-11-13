@@ -1,32 +1,32 @@
 ﻿using System;
 using System.Collections.Generic;
+using Android.Content;
 using Android.Support.V4.App;
-using Android.Views;
 using PeriwinkleApp.Android.Source.AdapterModels;
 using PeriwinkleApp.Android.Source.Adapters;
-using PeriwinkleApp.Android.Source.Presenters.ClientFragments;
 using PeriwinkleApp.Android.Source.Presenters.ClientPresenters;
+using PeriwinkleApp.Android.Source.Views.Activities;
 using PeriwinkleApp.Android.Source.Views.Fragments.Common;
 using PeriwinkleApp.Core.Sources.Models.Domain;
 using PeriwinkleApp.Core.Sources.Utils;
 
 namespace PeriwinkleApp.Android.Source.Views.Fragments.ClientFragments
 {
-	public interface IClientMbesListView
+	public interface IClientViewRecordsListView
 	{
-		void DisplayResponses(List<ResponseAdapterModel> responseDataset);
-		void LaunchViewResponse(Mbes mbes);
+		void DisplayRecords(List<SensorRecordAdapterModel> dataset);
+		void LaunchViewRecord(SensorRecord record);
 	}
 
-	public class ClientMbesListView : RecyclerFragment<ResponseRecyclerAdapter, ResponseAdapterModel>,
-									  IClientMbesListView
+	public class ClientViewRecordsListView : RecyclerFragment<SensorRecordRecyclerAdapter, SensorRecordAdapterModel>,
+											 IClientViewRecordsListView
 	{
-		private IClientMbesListPresenter presenter;
+		private IClientViewRecordsListPresenter presenter;
 
 		protected override void OnCreateInitialize()
 		{
 			IsAnimated = true;
-			presenter = new ClientMbesListPresenter(this);
+			presenter = new ClientViewRecordsListPresenter(this);
 		}
 
 		protected override int ResourceLayout => Resource.Layout.list_frag_generic;
@@ -37,39 +37,40 @@ namespace PeriwinkleApp.Android.Source.Views.Fragments.ClientFragments
 
 		protected override async void LoadInitialDataSet()
 		{
-			await presenter.GetAllMbes();
+			await presenter.GetAllRecords();
 		}
 
 		protected override void OnItemClick(object sender, int position)
 		{
 			base.OnItemClick(sender, position);
-			presenter.ViewMbesClicked(sender, position);
+			presenter.ViewRecordClicked(sender, position);
 		}
 
-		public void DisplayResponses(List<ResponseAdapterModel> responseDataset)
+		protected override void OnFloatingActionButtonClicked(object sender, EventArgs e)
 		{
-			if (responseDataset != null) 
-				UpdateAdapterDataSet(responseDataset);
+			base.OnFloatingActionButtonClicked(sender, e);
+			Logger.Log("ClientCreateRecordActivity");
 
+			Intent intent = new Intent(Context, typeof(ClientNewRecordActivity));
+			Activity.StartActivityForResult(intent, 1001);
+		}
+
+		public void DisplayRecords(List<SensorRecordAdapterModel> dataset)
+		{
+			UpdateAdapterDataSet(dataset);
 			HideProgressBar();
 		}
 
-		public void LaunchViewResponse(Mbes mbes)
+		public void LaunchViewRecord(SensorRecord record)
 		{
-			Logger.Log("LaunchViewResponse");
-			//TODO Dito ung Pag view nung journal
+			Logger.Log("LaunchViewRecord");
 			FragmentTransaction ft = Activity.SupportFragmentManager.BeginTransaction();
-			Fragment fragment = new ClientViewResponseView(mbes);
+			Fragment fragment = new ClientViewSensorRecordView(record);
 
 			ft.Replace(Resource.Id.fragment_container, fragment);
 			ft.AddToBackStack(null);
 			ft.Commit();
 		}
-
-		protected override void SetViewReferences(View view)
-		{
-			base.SetViewReferences(view);
-			RfFab.Visibility = ViewStates.Gone;
-		}
 	}
 }
+ 

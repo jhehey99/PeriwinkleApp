@@ -9,13 +9,14 @@ namespace PeriwinkleApp.Core.Sources.Utils
     {
         private static readonly Random Getrandom = new Random();
 
-        public static Account GetAccount ()
+        public static Account GetAccount (string username = "user_", AccountType type = AccountType.Client)
         {
             string str = randPostName ();
             string estr = randAlpha ();
             return new Account ()
             {
-                Username = "user_" + estr,
+                Username = username + Getrandom.Next(100),
+				AccTypeId = type,
                 FirstName = "first_" + str,
                 LastName = "last_" + str,
                 Email = "first_last" + estr + "@gmail.com",

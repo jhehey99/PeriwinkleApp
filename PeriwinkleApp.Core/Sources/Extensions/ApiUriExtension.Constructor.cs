@@ -75,7 +75,12 @@ namespace PeriwinkleApp.Core.Sources.Extensions
 
 			#region Accelerometer
                 { ApiUri.AddAccelerometerRecord, "/services/accelerometer/AddAccelerometerRecord.php"},
-                { ApiUri.GetAccelerometerRecordByClientId, "/services/accelerometer/GetAccelerometerRecordByClientId.php"}
+                { ApiUri.GetAccelerometerRecordByClientId, "/services/accelerometer/GetAccelerometerRecordByClientId.php"},
+			#endregion	
+
+			#region SensorRecord
+                { ApiUri.AddSensorRecord, "/services/record/AddSensorRecord.php"},
+				{ ApiUri.GetSensorRecordByClientId, "/services/record/GetSensorRecordByClientId.php"}
 			#endregion	
 
 			};

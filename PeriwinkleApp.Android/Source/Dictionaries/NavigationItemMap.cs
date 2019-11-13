@@ -40,6 +40,7 @@ namespace PeriwinkleApp.Android.Source.Dictionaries
                     navItemMap = new Dictionary<int, (int, Fragment)>()
                                  {
                                      { Resource.Id.cli_menu_home, (Resource.String.cli_menu_home_title, new ClientHomeView()) },
+                                     { Resource.Id.cli_menu_record, (Resource.String.cli_menu_record_title, new ClientRecordView()) }, // ClientDeviceView
                                      { Resource.Id.cli_menu_device, (Resource.String.cli_menu_device_title, new ClientMbesListView()) }, // ClientDeviceView
 									 { Resource.Id.cli_menu_behavior, (Resource.String.cli_menu_behavior_title, new ClientBehaviorView ()) },
 									 { Resource.Id.cli_menu_accelerometer, (Resource.String.cli_menu_accelerometer_title, new ClientBehaviorView ()) },

@@ -195,5 +195,45 @@ namespace PeriwinkleApp.Core.Sources.Services
 																			keyVal
 																		});
 		}
+
+		public async Task<List<ApiResponse>> AddSensorRecord(SensorRecord record)
+		{
+			// TODO
+			string url = ApiUri.AddSensorRecord.ToUrl();
+
+			string filename = record.Filename;
+			SensorRecordType type = record.RecordType.Value;
+
+			FileDirectory dir;
+
+			if (type == SensorRecordType.Acceleration)
+				dir = FileDirectory.Accelerometer;
+			else
+				dir = FileDirectory.Graph;
+
+
+			IFileService fileService = new FileService(dir);
+			string content = await fileService.ReadToEndAsStringAsync(filename);
+			byte[] bytesContent = content.ToBytesArray();
+
+			var response = await httpService.PostMultipartFormDataContent
+							   <IEnumerable<ApiResponse>, SensorRecord>(url, record, bytesContent, filename);
+
+			return response.ToList();
+		}
+
+		public async Task<List<SensorRecord>> GetSensorRecordByClientId(int? clientId)
+		{
+			// TODO
+			string url = ApiUri.GetSensorRecordByClientId.ToUrl();
+
+			var keyVal = new KeyValuePair<string, string>("clientId", clientId.ToString().ToBase64());
+
+			return await httpService.GetWithParams<List<SensorRecord>>(url,
+																		new List<KeyValuePair<string, string>>()
+																		{
+																			keyVal
+																		});
+		}
 	}
 }

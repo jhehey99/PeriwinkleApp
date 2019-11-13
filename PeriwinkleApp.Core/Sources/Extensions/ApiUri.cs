@@ -61,7 +61,13 @@
 	
 	#region Accelerometer
         AddAccelerometerRecord,
-		GetAccelerometerRecordByClientId
-	#endregion
+		GetAccelerometerRecordByClientId,
+		#endregion
+
+		#region SensorRecord
+		AddSensorRecord,
+		GetSensorRecordByClientId
+
+		#endregion
 	}
 }
