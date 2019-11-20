@@ -51,6 +51,7 @@ namespace PeriwinkleApp.Android.Source.Factories
 			{
 				item.Value.ClearSession();
 			}
+			SessionDictionary.Clear();
 		}
         
     }

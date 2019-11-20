@@ -95,6 +95,7 @@
     <Compile Include="Sources\Models\Common\BasicEntry.cs" />
     <Compile Include="Sources\Models\Common\ChartStat.cs" />
     <Compile Include="Sources\Models\Common\FrequencyEntry.cs" />
+    <Compile Include="Sources\Models\Common\RecordStatistics.cs" />
     <Compile Include="Sources\Models\Domain\AccelerometerRecord.cs" />
     <Compile Include="Sources\Models\Domain\Account.cs" />
     <Compile Include="Sources\Models\Domain\AccountType.cs" />
@@ -131,6 +132,7 @@
     <Compile Include="Sources\Services\JournalService.cs" />
     <Compile Include="Sources\Services\PasswordService.cs" />
     <Compile Include="Sources\Services\PeriwinkleHttpService.cs" />
+    <Compile Include="Sources\Services\StatisticsService.cs" />
     <Compile Include="Sources\Services\StatisticsServiceOld.cs" />
     <Compile Include="Sources\Services\XmlService.cs" />
     <Compile Include="Sources\Utils\BoolConverter.cs" />

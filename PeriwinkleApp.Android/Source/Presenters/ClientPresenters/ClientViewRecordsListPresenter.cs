@@ -27,24 +27,35 @@ namespace PeriwinkleApp.Android.Source.Presenters.ClientPresenters
 		private ClientSession cliSession;
 		private List<SensorRecord> records;
 		private Client loggedClient;
+		private string sessionKeyToUse;
 
-		public ClientViewRecordsListPresenter(IClientViewRecordsListView view)
+		public ClientViewRecordsListPresenter(IClientViewRecordsListView view, string sessionKeyToUse = null)
 		{
 			this.view = view;
+			this.sessionKeyToUse = sessionKeyToUse;
 			cliService = cliService ?? new ClientService();
 			LoadClientSession();
 		}
 
 		private void LoadClientSession()
 		{
-			cliSession = SessionFactory.ReadSession<ClientSession>(SessionKeys.LoggedClient);
+			if (sessionKeyToUse == null)
+				sessionKeyToUse = SessionKeys.LoggedClient;
+
+			cliSession = SessionFactory.ReadSession<ClientSession>(sessionKeyToUse);
 
 			loggedClient = CacheProvider.Get<Client>(CacheKey.LoggedClient);
 		}
 
 		public async Task GetAllRecords()
 		{
-			records = await cliService.GetSensorRecordByClientId(loggedClient.ClientId);
+			int clientId;
+			if (cliSession.ClientId != null)
+				clientId = cliSession.ClientId.Value;
+			else
+				clientId = loggedClient.ClientId.Value;
+
+			records = await cliService.GetSensorRecordByClientId(clientId);
 			
 			if (records == null)
 				return;

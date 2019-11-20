@@ -33,7 +33,7 @@ namespace PeriwinkleApp.Android.Source.Presenters.ClientPresenters
 		private readonly IClientViewBehaviorView view;
 		private BehaviorGraph behaviorGraph;
 		private IFileService fileService;
-		private IStatisticsService statService;
+		private IStatisticsServiceOld statService;
 		private IClientService cliService;
 		private const float MaxVoltage = 5f;
 		private const float Resolution = 1024f; // 10-bit adc

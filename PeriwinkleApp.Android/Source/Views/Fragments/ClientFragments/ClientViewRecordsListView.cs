@@ -22,11 +22,17 @@ namespace PeriwinkleApp.Android.Source.Views.Fragments.ClientFragments
 											 IClientViewRecordsListView
 	{
 		private IClientViewRecordsListPresenter presenter;
+		private readonly string sessionKeyToUse;
+
+		public ClientViewRecordsListView(string sessionKeyToUse = null)
+		{
+			this.sessionKeyToUse = sessionKeyToUse;
+		}
 
 		protected override void OnCreateInitialize()
 		{
 			IsAnimated = true;
-			presenter = new ClientViewRecordsListPresenter(this);
+			presenter = new ClientViewRecordsListPresenter(this, sessionKeyToUse);
 		}
 
 		protected override int ResourceLayout => Resource.Layout.list_frag_generic;

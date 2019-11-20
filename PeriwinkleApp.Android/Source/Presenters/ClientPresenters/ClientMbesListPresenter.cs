@@ -63,7 +63,7 @@ namespace PeriwinkleApp.Android.Source.Presenters.ClientPresenters
 			List<ResponseAdapterModel> dataSet =
 				mbes.Select((t, i) => new ResponseAdapterModel()
 				{
-					Date = t.DateCreated.ToLongDateString(),
+					Date = t.DateCreated.ToShortDateString(),
 					BMI = t.BMI.ToString()
 				}).ToList();
 

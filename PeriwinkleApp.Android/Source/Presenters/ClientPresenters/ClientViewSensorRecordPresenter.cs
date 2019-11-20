@@ -19,6 +19,7 @@ namespace PeriwinkleApp.Android.Source.Presenters.ClientPresenters
 	public interface IClientViewSensorRecordPresenter
 	{
 		Task LoadInitialLineChartData();
+		void LoadChartStatistics();
 		int CurrentIndexPiezo { get; }
 		int CurrentIndexAcceleration { get; }
 		int EntryCountPiezo { get; }
@@ -173,6 +174,37 @@ namespace PeriwinkleApp.Android.Source.Presenters.ClientPresenters
 
 			UpdatePiezo();
 			UpdateAcceleration();
+		}
+
+		public void LoadChartStatistics()
+		{
+			statService = statService ?? new StatisticsService(contents);
+
+			// Time
+			string startTime = record.StartTime.ToString("HH:mm:ss tt");
+			string stopTime = record.StopTime.ToString("HH:mm:ss tt");
+			string duration = (record.StopTime - record.StartTime).ToString("g");
+
+			RecordStatistics stats = new RecordStatistics()
+			{
+				StartTime = startTime,
+				StopTime = stopTime,
+				Duration = duration,
+				PiezoMax = statService.GetPiezoMax().ToString(),
+				PiezoMin = statService.GetPiezoMin().ToString(),
+				PiezoAverage = statService.GetPiezoAverage().ToString(),
+				AxMax = statService.GetAxMax().ToString(),
+				AxMin = statService.GetAxMin().ToString(),
+				AxAverage = statService.GetAxAverage().ToString(),
+				AyMax = statService.GetAyMax().ToString(),
+				AyMin = statService.GetAyMin().ToString(),
+				AyAverage = statService.GetAyAverage().ToString(),
+				AzMax = statService.GetAzMax().ToString(),
+				AzMin = statService.GetAzMin().ToString(),
+				AzAverage = statService.GetAzAverage().ToString()
+			};
+
+			view.DisplayRecordStatistics(stats);
 		}
 
 		private void InitLineChart()

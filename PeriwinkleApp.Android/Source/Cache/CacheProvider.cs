@@ -16,7 +16,7 @@ namespace PeriwinkleApp.Android.Source.Cache
 
 	public static class CacheProvider
 	{
-		private static readonly IMemoryCache Cache;
+		private static IMemoryCache Cache;
 
 		private static readonly List <string> Keys;
 
@@ -48,6 +48,8 @@ namespace PeriwinkleApp.Android.Source.Cache
 		{
 			Logger.Log("CacheProvider - Clear()");
 			Cache.Dispose();
+			Keys.Clear();
+			Cache = new MemoryCache(new MemoryCacheOptions());
 		}
 	}
 }

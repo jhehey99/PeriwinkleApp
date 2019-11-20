@@ -52,9 +52,7 @@ namespace PeriwinkleApp.Android.Source.Presenters.ClientPresenters
 			if (!await LoadMyConsultant ())
 				return;
 
-			string myConFullName = $"{MyConsultant?.FirstName} {MyConsultant?.LastName}";
-
-			string textMessage = $"Text your consultant, {myConFullName} at {MyConsultant?.Contact}";
+			string textMessage = $"Text your consultant at {MyConsultant?.Contact}";
 			ReactiveAdapterModel textModel = new ReactiveAdapterModel ()
 											 {
 												 Title = "Send a Text Message",
@@ -63,7 +61,7 @@ namespace PeriwinkleApp.Android.Source.Presenters.ClientPresenters
 			textModel.ActionClicked += OnTextActionClicked;
 
 
-            string callMessage = $"Call your consultant, {myConFullName} at {MyConsultant?.Contact}";
+            string callMessage = $"Call your consultant at {MyConsultant?.Contact}";
 			ReactiveAdapterModel callModel = new ReactiveAdapterModel ()
 											 {
 												 Title = "Make a Phone Call",
@@ -72,7 +70,7 @@ namespace PeriwinkleApp.Android.Source.Presenters.ClientPresenters
 			callModel.ActionClicked += OnCallActionClicked;
 
 
-            string emailMessage = $"Email your consultant, {myConFullName} at {MyConsultant?.Email}";
+            string emailMessage = $"Email your consultant at {MyConsultant?.Email}";
 			ReactiveAdapterModel emailModel = new ReactiveAdapterModel ()
 											  {
 												  Title = "Send an Email",
@@ -86,7 +84,6 @@ namespace PeriwinkleApp.Android.Source.Presenters.ClientPresenters
 												  };
 			
 			// TODO ACTION CLICKED
-
 			view.DisplayContactMethods(dataSet);
 		}
 

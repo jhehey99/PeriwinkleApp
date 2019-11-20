@@ -9,7 +9,7 @@ using PeriwinkleApp.Core.Sources.Utils;
 
 namespace PeriwinkleApp.Core.Sources.Services
 {
-	public interface IStatisticsService
+	public interface IStatisticsServiceOld
 	{
 		/*
 		List<BasicEntry> GetMaxVoltages ();
@@ -25,7 +25,7 @@ namespace PeriwinkleApp.Core.Sources.Services
 		float GetAverageInterval();
 	}
 
-	public class StatisticsServiceOld : IStatisticsService
+	public class StatisticsServiceOld : IStatisticsServiceOld
     {
 		public string Contents { get; set; }
 

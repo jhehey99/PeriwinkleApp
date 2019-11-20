@@ -16,21 +16,11 @@
             android:id="@+id/cli_menu_response"
             android:title="@string/cli_menu_response_title" />
         <item
-            android:id="@+id/cli_menu_device"
-            android:title="@string/cli_menu_device_title" />
-        <item
-            android:id="@+id/cli_menu_behavior"
-            android:title="@string/cli_menu_behavior_title" />
-        <item
-            android:id="@+id/cli_menu_accelerometer"
-            android:title="@string/cli_menu_accelerometer_title" />
-        <item
             android:id="@+id/cli_menu_journal"
             android:title="@string/cli_menu_journal_title" />
 	      <item
 		      android:id="@+id/cli_menu_consultant"
 		      android:title="@string/cli_menu_consultant_title" />
-
         <item
           android:id="@+id/cli_menu_entertainment"
           android:title="@string/cli_menu_entertainment_title" />

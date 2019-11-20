@@ -213,5 +213,385 @@
 				android:padding="10dp" />
 			
 		</LinearLayout>
+
+        <LinearLayout
+			android:orientation="horizontal"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="10dp"
+			android:layout_marginHorizontal="20dp">
+
+			<TextView
+				android:id="@+id/txt_duration_lbl"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_weight="0.4"
+				android:text="Duration:"
+				android:textColor="#4689C8"
+				android:textSize="20dp"
+				android:layout_gravity="center_vertical"
+				android:layout_marginLeft="20dp"/>
+
+			<TextView
+				android:id="@+id/txt_duration_val"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_weight="0.6"
+				android:text="00s"
+				android:textColor="#000000"
+				android:textSize="16dp"
+				android:padding="10dp" />
+			
+		</LinearLayout>
+
+        <LinearLayout
+			android:orientation="horizontal"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginHorizontal="20dp">
+
+			<TextView
+				android:id="@+id/txt_piezomax_lbl"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_weight="0.65"
+				android:text="Piezo Max Value:"
+				android:textColor="#4689C8"
+				android:textSize="20dp"
+				android:layout_gravity="center_vertical"
+				android:layout_marginLeft="20dp"/>
+
+			<TextView
+				android:id="@+id/txt_piezomax_val"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_weight="0.35"
+				android:text="4.50"
+				android:textColor="#000000"
+				android:textSize="18dp"
+				android:padding="10dp" />
+			
+		</LinearLayout>
+
+        <LinearLayout
+			android:orientation="horizontal"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginHorizontal="20dp">
+
+			<TextView
+				android:id="@+id/txt_piezomin_lbl"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_weight="0.65"
+				android:text="Piezo Min Value:"
+				android:textColor="#4689C8"
+				android:textSize="20dp"
+				android:layout_gravity="center_vertical"
+				android:layout_marginLeft="20dp"/>
+
+			<TextView
+				android:id="@+id/txt_piezomin_val"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_weight="0.35"
+				android:text="4.50"
+				android:textColor="#000000"
+				android:textSize="18dp"
+				android:padding="10dp" />
+			
+		</LinearLayout>
+
+        <LinearLayout
+			android:orientation="horizontal"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginHorizontal="20dp">
+
+			<TextView
+				android:id="@+id/txt_piezoave_lbl"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_weight="0.65"
+				android:text="Piezo Average Value:"
+				android:textColor="#4689C8"
+				android:textSize="20dp"
+				android:layout_gravity="center_vertical"
+				android:layout_marginLeft="20dp"/>
+
+			<TextView
+				android:id="@+id/txt_piezoave_val"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_weight="0.35"
+				android:text="4.50"
+				android:textColor="#000000"
+				android:textSize="18dp"
+				android:padding="10dp" />
+			
+		</LinearLayout>
+
+
+        <LinearLayout
+			android:orientation="horizontal"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginHorizontal="20dp">
+
+			<TextView
+				android:id="@+id/txt_axmax_lbl"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_weight="0.65"
+				android:text="Ax Max Value:"
+				android:textColor="#4689C8"
+				android:textSize="20dp"
+				android:layout_gravity="center_vertical"
+				android:layout_marginLeft="20dp"/>
+
+			<TextView
+				android:id="@+id/txt_axmax_val"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_weight="0.35"
+				android:text="4.50"
+				android:textColor="#000000"
+				android:textSize="18dp"
+				android:padding="10dp" />
+			
+		</LinearLayout>
+
+        <LinearLayout
+			android:orientation="horizontal"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginHorizontal="20dp">
+
+			<TextView
+				android:id="@+id/txt_axmin_lbl"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_weight="0.65"
+				android:text="Ax Min Value:"
+				android:textColor="#4689C8"
+				android:textSize="20dp"
+				android:layout_gravity="center_vertical"
+				android:layout_marginLeft="20dp"/>
+
+			<TextView
+				android:id="@+id/txt_axmin_val"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_weight="0.35"
+				android:text="4.50"
+				android:textColor="#000000"
+				android:textSize="18dp"
+				android:padding="10dp" />
+			
+		</LinearLayout>
+
+        <LinearLayout
+			android:orientation="horizontal"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginHorizontal="20dp">
+
+			<TextView
+				android:id="@+id/txt_axave_lbl"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_weight="0.65"
+				android:text="Ax Average Value:"
+				android:textColor="#4689C8"
+				android:textSize="20dp"
+				android:layout_gravity="center_vertical"
+				android:layout_marginLeft="20dp"/>
+
+			<TextView
+				android:id="@+id/txt_axave_val"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_weight="0.35"
+				android:text="4.50"
+				android:textColor="#000000"
+				android:textSize="18dp"
+				android:padding="10dp" />
+			
+		</LinearLayout>
+
+
+        <LinearLayout
+			android:orientation="horizontal"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginHorizontal="20dp">
+
+			<TextView
+				android:id="@+id/txt_aymax_lbl"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_weight="0.65"
+				android:text="Ay Max Value:"
+				android:textColor="#4689C8"
+				android:textSize="20dp"
+				android:layout_gravity="center_vertical"
+				android:layout_marginLeft="20dp"/>
+
+			<TextView
+				android:id="@+id/txt_aymax_val"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_weight="0.35"
+				android:text="4.50"
+				android:textColor="#000000"
+				android:textSize="18dp"
+				android:padding="10dp" />
+			
+		</LinearLayout>
+
+        <LinearLayout
+			android:orientation="horizontal"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginHorizontal="20dp">
+
+			<TextView
+				android:id="@+id/txt_aymin_lbl"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_weight="0.65"
+				android:text="Ay Min Value:"
+				android:textColor="#4689C8"
+				android:textSize="20dp"
+				android:layout_gravity="center_vertical"
+				android:layout_marginLeft="20dp"/>
+
+			<TextView
+				android:id="@+id/txt_aymin_val"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_weight="0.35"
+				android:text="4.50"
+				android:textColor="#000000"
+				android:textSize="18dp"
+				android:padding="10dp" />
+			
+		</LinearLayout>
+
+        <LinearLayout
+			android:orientation="horizontal"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginHorizontal="20dp">
+
+			<TextView
+				android:id="@+id/txt_ayave_lbl"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_weight="0.65"
+				android:text="Ay Average Value:"
+				android:textColor="#4689C8"
+				android:textSize="20dp"
+				android:layout_gravity="center_vertical"
+				android:layout_marginLeft="20dp"/>
+
+			<TextView
+				android:id="@+id/txt_ayave_val"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_weight="0.35"
+				android:text="4.50"
+				android:textColor="#000000"
+				android:textSize="18dp"
+				android:padding="10dp" />
+			
+		</LinearLayout>
+
+        <LinearLayout
+			android:orientation="horizontal"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginHorizontal="20dp">
+
+			<TextView
+				android:id="@+id/txt_azmax_lbl"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_weight="0.65"
+				android:text="Az Max Value:"
+				android:textColor="#4689C8"
+				android:textSize="20dp"
+				android:layout_gravity="center_vertical"
+				android:layout_marginLeft="20dp"/>
+
+			<TextView
+				android:id="@+id/txt_azmax_val"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_weight="0.35"
+				android:text="4.50"
+				android:textColor="#000000"
+				android:textSize="18dp"
+				android:padding="10dp" />
+			
+		</LinearLayout>
+
+        <LinearLayout
+			android:orientation="horizontal"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginHorizontal="20dp">
+
+			<TextView
+				android:id="@+id/txt_azmin_lbl"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_weight="0.65"
+				android:text="Az Min Value:"
+				android:textColor="#4689C8"
+				android:textSize="20dp"
+				android:layout_gravity="center_vertical"
+				android:layout_marginLeft="20dp"/>
+
+			<TextView
+				android:id="@+id/txt_azmin_val"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_weight="0.35"
+				android:text="4.50"
+				android:textColor="#000000"
+				android:textSize="18dp"
+				android:padding="10dp" />
+			
+		</LinearLayout>
+
+        <LinearLayout
+			android:orientation="horizontal"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginHorizontal="20dp">
+
+			<TextView
+				android:id="@+id/txt_azave_lbl"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_weight="0.65"
+				android:text="Az Average Value:"
+				android:textColor="#4689C8"
+				android:textSize="20dp"
+				android:layout_gravity="center_vertical"
+				android:layout_marginLeft="20dp"/>
+
+			<TextView
+				android:id="@+id/txt_azave_val"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_weight="0.35"
+				android:text="4.50"
+				android:textColor="#000000"
+				android:textSize="18dp"
+				android:padding="10dp" />
+			
+		</LinearLayout>
     </LinearLayout>
 </ScrollView>

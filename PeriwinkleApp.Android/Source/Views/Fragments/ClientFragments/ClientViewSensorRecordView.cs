@@ -16,6 +16,7 @@ namespace PeriwinkleApp.Android.Source.Views.Fragments.ClientFragments
 	{
 		void DisplayPiezoLineChart(LineChart linePiezo);
 		void DisplayAccelerationLineChart(LineChart lineAx, LineChart lineAy, LineChart lineAz);
+		void DisplayRecordStatistics(RecordStatistics stats);
 	}
 	public class ClientViewSensorRecordView : Fragment, IClientViewSensorRecordView
 	{
@@ -26,6 +27,13 @@ namespace PeriwinkleApp.Android.Source.Views.Fragments.ClientFragments
 		private LineChart linePiezo, lineAx, lineAy, lineAz;
 		private SeekBar seekPiezo, seekAccel;
 		private bool isSeekingPiezo = false, isSeekingAccel = false;
+
+		// Statistics
+		private TextView txtStartTime, txtStopTime, txtDuration,
+						 txtPiezoMax, txtPiezoMin, txtPiezoAverage,
+						 txtAxMax, txtAxMin, txtAxAverage,
+						 txtAyMax, txtAyMin, txtAyAverage,
+						 txtAzMax, txtAzMin, txtAzAverage;
 
 		public ClientViewSensorRecordView(SensorRecord record)
 		{
@@ -60,9 +68,28 @@ namespace PeriwinkleApp.Android.Source.Views.Fragments.ClientFragments
 			seekAccel.StartTrackingTouch += OnSeekAccelStart;
 			seekAccel.ProgressChanged += OnSeekAccelProgressChanged;
 
+			// Statistics
+			txtStartTime = view.FindViewById<TextView>(Resource.Id.txt_start_time_val);
+			txtStopTime = view.FindViewById<TextView>(Resource.Id.txt_stop_time_val);
+			txtDuration = view.FindViewById<TextView>(Resource.Id.txt_duration_val);
+			txtPiezoMax = view.FindViewById<TextView>(Resource.Id.txt_piezomax_val);
+			txtPiezoMin = view.FindViewById<TextView>(Resource.Id.txt_piezomin_val);
+			txtPiezoAverage = view.FindViewById<TextView>(Resource.Id.txt_piezoave_val);
+			txtAxMax = view.FindViewById<TextView>(Resource.Id.txt_axmax_val);
+			txtAxMin = view.FindViewById<TextView>(Resource.Id.txt_axmin_val);
+			txtAxAverage = view.FindViewById<TextView>(Resource.Id.txt_axave_val);
+			txtAyMax = view.FindViewById<TextView>(Resource.Id.txt_aymax_val);
+			txtAyMin = view.FindViewById<TextView>(Resource.Id.txt_aymin_val);
+			txtAyAverage = view.FindViewById<TextView>(Resource.Id.txt_ayave_val);
+			txtAzMax = view.FindViewById<TextView>(Resource.Id.txt_azmax_val);
+			txtAzMin = view.FindViewById<TextView>(Resource.Id.txt_azmin_val);
+			txtAzAverage = view.FindViewById<TextView>(Resource.Id.txt_azave_val);
+
+			// Load
 			await presenter.LoadInitialLineChartData();
 			seekPiezo.Max = presenter.EntryCountPiezo;
 			seekAccel.Max = presenter.EntryCountAcceleration;
+			presenter.LoadChartStatistics();
 		}
 
 		private void OnSeekPiezoStart(object sender, SeekBar.StartTrackingTouchEventArgs e)
@@ -119,7 +146,23 @@ namespace PeriwinkleApp.Android.Source.Views.Fragments.ClientFragments
 			chartAz.Chart = lineAz;
 		}
 
-		//TODO ITEST TO
-		//TODO SCROLL
+		public void DisplayRecordStatistics(RecordStatistics stats)
+		{
+			txtStartTime.Text = stats.StartTime;
+			txtStopTime.Text = stats.StopTime;
+			txtDuration.Text = stats.Duration;
+			txtPiezoMax.Text = stats.PiezoMax;
+			txtPiezoMin.Text = stats.PiezoMin;
+			txtPiezoAverage.Text = stats.PiezoAverage;
+			txtAxMax.Text = stats.AxMax;
+			txtAxMin.Text = stats.AxMin;
+			txtAxAverage.Text = stats.AxAverage;
+			txtAyMax.Text = stats.AyMax;
+			txtAyMin.Text = stats.AyMin;
+			txtAyAverage.Text = stats.AyAverage;
+			txtAzMax.Text = stats.AzMax;
+			txtAzMin.Text = stats.AzMin;
+			txtAzAverage.Text = stats.AzAverage;
+		}
 	}
 }

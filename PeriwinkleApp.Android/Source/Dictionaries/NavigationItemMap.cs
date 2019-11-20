@@ -45,8 +45,6 @@ namespace PeriwinkleApp.Android.Source.Dictionaries
                                      { Resource.Id.cli_menu_home, (Resource.String.cli_menu_home_title, new ClientHomeView()) },
                                      { Resource.Id.cli_menu_record, (Resource.String.cli_menu_record_title, new ClientRecordView()) },
                                      { Resource.Id.cli_menu_response, (Resource.String.cli_menu_response_title, new ClientMbesListView()) },
-									 { Resource.Id.cli_menu_behavior, (Resource.String.cli_menu_behavior_title, new ClientBehaviorView ()) },
-									 { Resource.Id.cli_menu_accelerometer, (Resource.String.cli_menu_accelerometer_title, new ClientBehaviorView ()) },
                                      { Resource.Id.cli_menu_journal, (Resource.String.cli_menu_journal_title, new ClientJournalListView ()) },
                                      { Resource.Id.cli_menu_consultant, (Resource.String.cli_menu_consultant_title, new ClientMyConsultantView ()) },
                                      { Resource.Id.cli_menu_entertainment, (Resource.String.cli_menu_entertainment_title, new ClientPlaylistView ()) },

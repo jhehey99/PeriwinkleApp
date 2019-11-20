@@ -50,7 +50,8 @@ namespace PeriwinkleApp.Android.Source.Views.Fragments.ConsultantFragments
 			Logger.Log ("StartViewClientBehavior");
 			FragmentTransaction ft = Activity.SupportFragmentManager.BeginTransaction();
 
-			Fragment headFragment = new ClientBehaviorView(SessionKeys.ViewClient);
+			//Fragment headFragment = new ClientBehaviorView(SessionKeys.ViewClient);
+			Fragment headFragment = new ClientViewRecordsListView(SessionKeys.ViewClient);
 			ft.Replace(Resource.Id.fragment_container, headFragment);
 			ft.AddToBackStack (null);
 			ft.Commit ();
