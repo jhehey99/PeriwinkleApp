@@ -44,7 +44,6 @@ namespace PeriwinkleApp.Android.Source.Presenters.ClientPresenters
         public async Task AddJournalEntry (JournalEntry journal)
 		{
 			journal.JournalClientId = client.ClientId;
-			journal.ImageFileName = "blabla";
 
 			List <ApiResponse> response = await cliService.AddJournalEntry (journal);
 			Logger.Debug (response.FirstOrDefault());

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Microsoft.Extensions.Caching.Memory;
+using PeriwinkleApp.Core.Sources.Utils;
 
 namespace PeriwinkleApp.Android.Source.Cache
 {
@@ -45,6 +46,7 @@ namespace PeriwinkleApp.Android.Source.Cache
 		}
 		public static void Clear()
 		{
+			Logger.Log("CacheProvider - Clear()");
 			Cache.Dispose();
 		}
 	}

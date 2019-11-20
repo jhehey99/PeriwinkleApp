@@ -59,7 +59,7 @@ namespace PeriwinkleApp.Android.Source.Presenters.Common
 
             // verify natin ung password na input at ni account
             Password userPassword = await passService.GetPasswordByUsername (username);
-            bool validPass = hashService.VerifyPasswordHash (password, userPassword);
+            bool validPass = await hashService.VerifyPasswordHashAsync (password, userPassword);
 
             // pag di valid, show tayo ng error
             if (!validPass)

@@ -38,9 +38,13 @@ namespace PeriwinkleApp.Android.Source.Views.Fragments.ClientFragments
 
         protected override async void LoadInitialDataSet ()
 		{
-			//TODO PRESENTER LOAD DATA
-			// GET JOURNALS FROM THE DATABASE
 			await presenter.GetAllJournals ();
+		}
+
+		public override async void OnResume()
+		{
+			base.OnResume();
+			await presenter.GetAllJournals();
 		}
 
 		protected override void OnItemClick (object sender, int position)
@@ -51,7 +55,6 @@ namespace PeriwinkleApp.Android.Source.Views.Fragments.ClientFragments
 
         protected override void OnFloatingActionButtonClicked (object sender, EventArgs e)
 		{
-			//TODO Dito ung pag create ng new journal
 			base.OnFloatingActionButtonClicked (sender, e);
 			Logger.Log("OnFloatingActionButtonClicked");
 
@@ -70,7 +73,6 @@ namespace PeriwinkleApp.Android.Source.Views.Fragments.ClientFragments
 		public void LaunchViewJournal (JournalEntry journal)
 		{
 			Logger.Log ("LaunchViewJournal");
-			//TODO Dito ung Pag view nung journal
 			FragmentTransaction ft = Activity.SupportFragmentManager.BeginTransaction();
 			Fragment fragment = new ClientViewJournalView(journal);
 

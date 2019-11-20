@@ -111,12 +111,14 @@
     <Compile Include="Source\Presenters\ClientPresenters\ClientMbesListPresenter.cs" />
     <Compile Include="Source\Presenters\ClientPresenters\ClientMyConsultantBodyPresenter.cs" />
     <Compile Include="Source\Presenters\ClientPresenters\ClientMyConsultantPresenter.cs" />
+    <Compile Include="Source\Presenters\ClientPresenters\ClientNewRecordPresenter.cs" />
     <Compile Include="Source\Presenters\ClientPresenters\ClientPlaylistPresenter.cs" />
     <Compile Include="Source\Presenters\ClientPresenters\ClientViewAccelerometerPresenter.cs" />
     <Compile Include="Source\Presenters\ClientPresenters\ClientViewBehaviorPresenter.cs" />
     <Compile Include="Source\Presenters\ClientPresenters\ClientViewJournalPresenter.cs" />
     <Compile Include="Source\Presenters\ClientPresenters\ClientViewRecordsListPresenter.cs" />
     <Compile Include="Source\Presenters\ClientPresenters\ClientViewResponsePresenter.cs" />
+    <Compile Include="Source\Presenters\ClientPresenters\ClientViewSensorRecordPresenter.cs" />
     <Compile Include="Source\ViewHolders\CardSensorRecordViewHolder.cs" />
     <Compile Include="Source\Views\Activities\AdminMainActivity.cs" />
     <Compile Include="Source\Views\Activities\ClientAccelerometerActivity.cs" />
@@ -203,6 +205,7 @@
     <Compile Include="Source\Views\Fragments\Common\DatePickerDialogFragment.cs" />
     <Compile Include="Source\Views\Fragments\Common\HideSoftInputFragment.cs" />
     <Compile Include="Source\Views\Fragments\Common\LoginView.cs" />
+    <Compile Include="Source\Views\Fragments\Common\LogoutView.cs" />
     <Compile Include="Source\Views\Fragments\Common\ProfileBodyView.cs" />
     <Compile Include="Source\Views\Fragments\Common\ProfileHeadView.cs" />
     <Compile Include="Source\Views\Fragments\Common\ProfileView.cs" />
@@ -640,6 +643,41 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\menu\admin_main_drawer.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\client_frag_record_new.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\drawable-v21\entertainment.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\drawable-v21\home.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\drawable-v21\journal.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\drawable-v21\logout.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\drawable-v21\my_clients.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\drawable-v21\my_consultant.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\drawable-v21\new_client.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\drawable-v21\record.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\client_frag_record_view.xml">
       <Generator>MSBuild:UpdateGeneratedFiles</Generator>
       <SubType>Designer</SubType>
     </AndroidResource>

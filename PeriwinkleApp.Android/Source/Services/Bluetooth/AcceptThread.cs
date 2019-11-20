@@ -31,9 +31,9 @@ namespace PeriwinkleApp.Android.Source.Services.Bluetooth
 
 		public override void Run ()
 		{
-			// ReSharper disable once TooWideLocalVariableScope
+			Logger.Log("AcceptThread Run");
 			BluetoothSocket socket = null;
-            while (true)
+			while (true)
 			{
 				try
 				{
@@ -57,6 +57,7 @@ namespace PeriwinkleApp.Android.Source.Services.Bluetooth
 		
 		public void Cancel ()
 		{
+			Logger.Log("AcceptThread Cancel");
 			try
 			{
 				serverSocket.Close ();

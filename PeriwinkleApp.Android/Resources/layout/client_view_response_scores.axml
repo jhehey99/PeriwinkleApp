@@ -13,7 +13,7 @@
 	    <TextView
 		    android:layout_width="0dp"
 		    android:layout_height="wrap_content"
-            android:layout_weight="0.7"
+            android:layout_weight="0.6"
 		    android:text="Date of Response: "
 		    android:textColor="#4689C8"
 		    android:textSize="20dp"/>
@@ -21,8 +21,8 @@
             android:id="@+id/score_date"
 		    android:layout_width="0dp"
 		    android:layout_height="wrap_content"
-            android:layout_weight="0.3"
-		    android:text="01/22/19 "
+            android:layout_weight="0.4"
+		    android:text="00/00/0000"
 		    android:textColor="#4689C8"
             android:background="#c8e8ed"
             android:textAlignment="center"
@@ -38,7 +38,7 @@
 	    <TextView
 		    android:layout_width="0dp"
 		    android:layout_height="wrap_content"
-            android:layout_weight="0.7"
+            android:layout_weight="0.6"
 		    android:text="Height: "
 		    android:textColor="#4689C8"
 		    android:textSize="20dp"/>
@@ -46,8 +46,8 @@
             android:id="@+id/score_height"
 		    android:layout_width="0dp"
 		    android:layout_height="wrap_content"
-            android:layout_weight="0.3"
-		    android:text="169cm "
+            android:layout_weight="0.4"
+		    android:text="0cm "
 		    android:textColor="#4689C8"
             android:background="#c8e8ed"
             android:textAlignment="center"
@@ -63,7 +63,7 @@
 	    <TextView
 		    android:layout_width="0dp"
 		    android:layout_height="wrap_content"
-            android:layout_weight="0.7"
+            android:layout_weight="0.6"
 		    android:text="Weight: "
 		    android:textColor="#4689C8"
 		    android:textSize="20dp"/>
@@ -71,8 +71,8 @@
             android:id="@+id/score_weight"
 		    android:layout_width="0dp"
 		    android:layout_height="wrap_content"
-            android:layout_weight="0.3"
-		    android:text="69kg "
+            android:layout_weight="0.4"
+		    android:text="0kg "
 		    android:textColor="#4689C8"
             android:background="#c8e8ed"
             android:textAlignment="center"
@@ -88,7 +88,7 @@
 	    <TextView
 		    android:layout_width="0dp"
 		    android:layout_height="wrap_content"
-            android:layout_weight="0.7"
+            android:layout_weight="0.6"
 		    android:text="BMI: "
 		    android:textColor="#4689C8"
 		    android:textSize="20dp"/>
@@ -96,8 +96,8 @@
             android:id="@+id/score_bmi"
 		    android:layout_width="0dp"
 		    android:layout_height="wrap_content"
-            android:layout_weight="0.3"
-		    android:text="69 "
+            android:layout_weight="0.4"
+		    android:text="0"
 		    android:textColor="#4689C8"
             android:background="#c8e8ed"
             android:textAlignment="center"
@@ -123,7 +123,7 @@
 	    <TextView
 		    android:layout_width="0dp"
 		    android:layout_height="wrap_content"
-            android:layout_weight="0.7"
+            android:layout_weight="0.6"
 		    android:text="Binge Eating: "
 		    android:textColor="#4689C8"
 		    android:textSize="20dp"/>
@@ -131,8 +131,8 @@
             android:id="@+id/score_binge"
 		    android:layout_width="0dp"
 		    android:layout_height="wrap_content"
-            android:layout_weight="0.3"
-		    android:text="23.45"
+            android:layout_weight="0.4"
+		    android:text="00.00"
 		    android:textColor="#4689C8"
             android:background="#c8e8ed"
             android:textAlignment="center"
@@ -148,7 +148,7 @@
 	    <TextView
 		    android:layout_width="0dp"
 		    android:layout_height="wrap_content"
-            android:layout_weight="0.7"
+            android:layout_weight="0.6"
 		    android:text="Bulimia Nervosa: "
 		    android:textColor="#4689C8"
 		    android:textSize="20dp"/>
@@ -156,8 +156,8 @@
             android:id="@+id/score_bulimia"
 		    android:layout_width="0dp"
 		    android:layout_height="wrap_content"
-            android:layout_weight="0.3"
-		    android:text="23.45"
+            android:layout_weight="0.4"
+		    android:text="00.00"
             android:background="#c8e8ed"
 		    android:textColor="#4689C8"
             android:textAlignment="center"
@@ -173,7 +173,7 @@
 	    <TextView
 		    android:layout_width="0dp"
 		    android:layout_height="wrap_content"
-            android:layout_weight="0.7"
+            android:layout_weight="0.6"
 		    android:text="Anorexia Nervosa: "
 		    android:textColor="#4689C8"
 		    android:textSize="20dp"/>
@@ -181,8 +181,8 @@
             android:id="@+id/score_anorexia"
 		    android:layout_width="0dp"
 		    android:layout_height="wrap_content"
-            android:layout_weight="0.3"
-		    android:text="23.45"
+            android:layout_weight="0.4"
+		    android:text="00.00"
 		    android:textColor="#4689C8"
             android:background="#c8e8ed"
             android:textAlignment="center"

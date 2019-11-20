@@ -131,7 +131,7 @@
     <Compile Include="Sources\Services\JournalService.cs" />
     <Compile Include="Sources\Services\PasswordService.cs" />
     <Compile Include="Sources\Services\PeriwinkleHttpService.cs" />
-    <Compile Include="Sources\Services\StatisticsService.cs" />
+    <Compile Include="Sources\Services\StatisticsServiceOld.cs" />
     <Compile Include="Sources\Services\XmlService.cs" />
     <Compile Include="Sources\Utils\BoolConverter.cs" />
     <Compile Include="Sources\Utils\FloatUtils.cs" />

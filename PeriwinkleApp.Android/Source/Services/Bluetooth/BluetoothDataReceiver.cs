@@ -29,7 +29,6 @@ namespace PeriwinkleApp.Android.Source.Services.Bluetooth
             {
                 Logger.Log($"Value = {val}");
             }
-
         }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using PeriwinkleApp.Core.Sources.Crypto;
 using PeriwinkleApp.Core.Sources.Models.Domain;
 using PeriwinkleApp.Core.Sources.Services.Interfaces;
+using System.Threading.Tasks;
 
 namespace PeriwinkleApp.Core.Sources.Services
 {
@@ -26,5 +27,15 @@ namespace PeriwinkleApp.Core.Sources.Services
 
             return inputHashed == userPassword.PasswordHash;
         }
-    }
+
+		public async Task<bool> VerifyPasswordHashAsync(string inputPassword, Password userPassword)
+		{
+			string inputHashed = await Task.Run(() =>
+			{
+				return BCrypt.HashPassword(inputPassword, userPassword.PasswordSalt);
+			});
+
+			return inputHashed == userPassword.PasswordHash;
+		}
+	}
 }

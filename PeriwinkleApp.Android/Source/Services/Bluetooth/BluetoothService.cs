@@ -42,6 +42,7 @@ namespace PeriwinkleApp.Android.Source.Services.Bluetooth
 
 		public void ManageConnectedSocket (BluetoothSocket socket)
 		{
+			Logger.Log("Bluetooth Service ManageConnectedSocket");
 			connectedThread = new ConnectedThread (this, socket);
 			connectedThread.OnSocketClosed += OnSocketClosed;
             connectedThread.Start ();
@@ -49,14 +50,15 @@ namespace PeriwinkleApp.Android.Source.Services.Bluetooth
 
 		private void OnSocketClosed(object sender, EventArgs e)
 		{
-			Logger.Log("OnSocketClosed");
-			Stop();
-			Start();
-			StartClient(btDevice);
+			Logger.Log("Bluetooth Service OnSocketClosed");
+			//Stop();
+			//if(btDevice != null)
+				//StartClient(btDevice);
 		}
 
 		public void Start ()
 		{
+			Logger.Log("Bluetooth Service Start");
 			if (connectThread != null)
 			{
 				connectThread.Cancel ();
@@ -72,13 +74,15 @@ namespace PeriwinkleApp.Android.Source.Services.Bluetooth
 
 		public void StartClient (BluetoothDevice device)
 		{
-			connectThread = new ConnectThread (this, device);
+			Logger.Log("Bluetooth Service Start Client");
+			connectThread = new ConnectThread(this, device);
 			connectThread.Start ();
 		}
 
         public void Stop()
         {
-            if (connectThread != null)
+			Logger.Log("Bluetooth Service Stop");
+			if (connectThread != null)
             {
                 connectThread.Cancel();
                 connectThread = null;

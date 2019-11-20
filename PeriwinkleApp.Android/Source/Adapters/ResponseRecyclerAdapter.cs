@@ -20,7 +20,7 @@ namespace PeriwinkleApp.Android.Source.Adapters
 			// Set the CardView's TextViews
 			viewHolder.ImageAvatar.SetImageResource(Resource.Drawable.avatar_male);
 			viewHolder.TextName.Text = DataSet[position].Date;
-			viewHolder.TextEmail.Text = DataSet[position].BMI;
+			viewHolder.TextEmail.Text = "BMI: " + DataSet[position].BMI;
 		}
 
 		public override RecyclerView.ViewHolder OnCreateViewHolder(ViewGroup parent, int viewType)

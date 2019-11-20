@@ -25,7 +25,7 @@ namespace PeriwinkleApp.Core.Sources.Services
 		float GetAverageInterval();
 	}
 
-	public class StatisticsService : IStatisticsService
+	public class StatisticsServiceOld : IStatisticsService
     {
 		public string Contents { get; set; }
 
@@ -39,7 +39,7 @@ namespace PeriwinkleApp.Core.Sources.Services
 		private int maxVal = 1024;
 		private int threshold = (int)(1024 * 0.25);
 
-		public StatisticsService (string contents)
+		public StatisticsServiceOld (string contents)
 		{
 			if (contents == null)
 				return;
@@ -93,7 +93,7 @@ namespace PeriwinkleApp.Core.Sources.Services
 			}
         }
 
-		~StatisticsService ()
+		~StatisticsServiceOld ()
 		{
 			Contents = null;
 			contentSplit = null;

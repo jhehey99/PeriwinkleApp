@@ -34,7 +34,7 @@
 		    android:orientation="horizontal">
 
 		    <EditText
-			    android:inputType="number"
+			    android:inputType="numberDecimal"
 			    android:id="@+id/txt_cli_ins_height"
 			    android:paddingLeft="10dp"
 			    android:layout_width="0dp"
@@ -132,7 +132,7 @@
 		    android:orientation="horizontal">
 
 		    <EditText
-			    android:inputType="number"
+			    android:inputType="numberDecimal"
 			    android:id="@+id/txt_cli_ins_weight"
 			    android:layout_width="0dp"
 			    android:layout_height="wrap_content"

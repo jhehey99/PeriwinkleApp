@@ -9,31 +9,39 @@ namespace PeriwinkleApp.Android.Source.ViewHolders
     {
         public TextView TextId { get; private set; }
         public TextView TextQuestion { get; private set; }
-        public Spinner SpinScale { get; private set; }
+		public RadioGroup RadioScale { get; private set; }
 
         public CardQuestionViewHolder (View itemView, Action <int> listener) : base (itemView)
         {
             TextId = itemView.FindViewById<TextView>(Resource.Id.card_view_qtn_id);
             TextQuestion = itemView.FindViewById<TextView>(Resource.Id.card_view_qtn_qtn);
-            SpinScale = itemView.FindViewById<Spinner>(Resource.Id.spin_scale);
-            SpinScale.ItemSelected += SpinnerItemSelected;
+			RadioScale = itemView.FindViewById<RadioGroup>(Resource.Id.radio_scale);
+			RadioScale.CheckedChange += RadioItemChanged;
             itemView.Click += (sender, e) => listener(base.LayoutPosition);
         }
 
-        public EventHandler <QuestionScaleSelectedEventArgs> QuestionScaleSelected;
+		public EventHandler<QuestionScaleCheckedEventArgs> QuestionScaleChecked;
 
-        private void SpinnerItemSelected (object sender, AdapterView.ItemSelectedEventArgs e)
-        {
-            // pag pumili nung scale value, i-ca-call to
-            QuestionScaleSelectedEventArgs h = new QuestionScaleSelectedEventArgs(e) {SpinnerPosition = LayoutPosition};
-            QuestionScaleSelected(sender, h);
-        }
-    }
+		private void RadioItemChanged(object sender, RadioGroup.CheckedChangeEventArgs e)
+		{
+			RadioButton radioSelected = ItemView.FindViewById<RadioButton>(RadioScale.CheckedRadioButtonId);
+			int.TryParse(radioSelected.Text, out int scale);
 
-    public class QuestionScaleSelectedEventArgs : AdapterView.ItemSelectedEventArgs
-    {
-        public int SpinnerPosition { get; set; }
+			QuestionScaleCheckedEventArgs ea = new QuestionScaleCheckedEventArgs(e)
+			{
+				ScalePosition = LayoutPosition,
+				ScaleValue = scale
+			};
+			QuestionScaleChecked(sender, ea);
+		}
+	}
 
-        public QuestionScaleSelectedEventArgs(AdapterView.ItemSelectedEventArgs e) : base(e.Parent, e.View, e.Position, e.Id) { }
-    }
+	public class QuestionScaleCheckedEventArgs : RadioGroup.CheckedChangeEventArgs
+	{ 
+		public int ScalePosition { get; set; }
+		public int ScaleValue { get; set; }
+
+		public QuestionScaleCheckedEventArgs(RadioGroup.CheckedChangeEventArgs e) : base(e.CheckedId) { }
+	}
+
 }

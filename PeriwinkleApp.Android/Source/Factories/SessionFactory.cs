@@ -2,6 +2,7 @@
 using System.Runtime.CompilerServices;
 using Android.App;
 using PeriwinkleApp.Android.Source.Session;
+using PeriwinkleApp.Core.Sources.Utils;
 
 namespace PeriwinkleApp.Android.Source.Factories
 {
@@ -42,6 +43,15 @@ namespace PeriwinkleApp.Android.Source.Factories
 
             return SessionDictionary[key] as T;
         }
+
+		public static void ClearSession()
+		{
+			Logger.Log("SessionFactory - ClearSession()");
+			foreach(var item in SessionDictionary)
+			{
+				item.Value.ClearSession();
+			}
+		}
         
     }
 }

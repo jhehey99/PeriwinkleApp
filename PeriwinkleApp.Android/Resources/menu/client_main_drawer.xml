@@ -8,36 +8,31 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/cli_menu_home"
-            android:icon="@drawable/ic_menu_camera"
             android:title="@string/cli_menu_home_title" />
         <item
             android:id="@+id/cli_menu_record"
-            android:icon="@drawable/ic_menu_gallery"
             android:title="@string/cli_menu_record_title" />
         <item
+            android:id="@+id/cli_menu_response"
+            android:title="@string/cli_menu_response_title" />
+        <item
             android:id="@+id/cli_menu_device"
-            android:icon="@drawable/ic_menu_gallery"
             android:title="@string/cli_menu_device_title" />
         <item
             android:id="@+id/cli_menu_behavior"
-            android:icon="@drawable/ic_menu_slideshow"
             android:title="@string/cli_menu_behavior_title" />
         <item
             android:id="@+id/cli_menu_accelerometer"
-            android:icon="@drawable/ic_menu_slideshow"
             android:title="@string/cli_menu_accelerometer_title" />
         <item
             android:id="@+id/cli_menu_journal"
-            android:icon="@drawable/ic_menu_manage"
             android:title="@string/cli_menu_journal_title" />
 	      <item
 		      android:id="@+id/cli_menu_consultant"
-		      android:icon="@drawable/ic_menu_manage"
 		      android:title="@string/cli_menu_consultant_title" />
 
         <item
           android:id="@+id/cli_menu_entertainment"
-          android:icon="@drawable/ic_menu_manage"
           android:title="@string/cli_menu_entertainment_title" />
 
     </group>
@@ -46,7 +41,6 @@
         <menu>
             <item
                 android:id="@+id/menu_nav_logout"
-                android:icon="@drawable/ic_menu_share"
                 android:title="@string/menu_logout_title" />
         </menu>
     </item>

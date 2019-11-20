@@ -168,7 +168,7 @@ namespace PeriwinkleApp.Android.Source.Presenters.ClientPresenters
 			// todo 
 			// cliService.GetBehaviorStatistics(
 
-            statService = statService ?? new StatisticsService(contents);
+            statService = statService ?? new StatisticsServiceOld(contents);
 
 			// Time
 			string startTime = behaviorGraph.StartTime.ToString ("HH:mm:ss tt");

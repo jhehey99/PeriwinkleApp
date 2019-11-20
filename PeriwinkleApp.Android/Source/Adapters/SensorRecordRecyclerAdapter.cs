@@ -18,14 +18,7 @@ namespace PeriwinkleApp.Android.Source.Adapters
 		{
 			CardSensorRecordViewHolder viewHolder = (CardSensorRecordViewHolder)holder;
 
-			SensorRecordType type = DataSet[position].RecordType;
-			string recordType = "";
-			if (type == SensorRecordType.Acceleration)
-				recordType = "Acceleration";
-			else
-				recordType = "Piezo";
-
-			viewHolder.TextRecordType.Text = recordType;
+			viewHolder.TextFilename.Text = DataSet[position].Filename;
 			viewHolder.TextStartTime.Text = "Start DateTime: " + DataSet[position].StartTime.ToString("F");
 			viewHolder.TextStopTime.Text = "Stop DateTime: " + DataSet[position].StopTime.ToString("F");
 			viewHolder.AddButtonViewClicked(DataSet[position].ViewReportClicked, position);

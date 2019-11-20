@@ -9,12 +9,12 @@ namespace PeriwinkleApp.Core.Sources.Services
 {
 	public enum FileExtension
 	{
-		Graph, Journal, Accelerometer
+		Graph, Journal, Accelerometer, SensorRecord
 	}
 
 	public enum FileDirectory
 	{
-		Graph, Journal, Accelerometer
+		Graph, Journal, Accelerometer, SensorRecord
 	}
 
 	public interface IFileService
@@ -160,6 +160,7 @@ namespace PeriwinkleApp.Core.Sources.Services
 				{FileExtension.Graph, "pbg"},
 				{FileExtension.Journal, "pj"},
 				{FileExtension.Accelerometer, "par"},
+				{FileExtension.SensorRecord, "rec"}
 			};
 
 		private static Dictionary<FileDirectory, string> periwinkleDirectories =
@@ -167,7 +168,8 @@ namespace PeriwinkleApp.Core.Sources.Services
 			{
 				{FileDirectory.Graph, "graphs"},
 				{FileDirectory.Journal, "journals"},
-				{FileDirectory.Accelerometer, "accel"}
+				{FileDirectory.Accelerometer, "accel"},
+				{FileDirectory.SensorRecord, "records"}
 			};
 
 		public static string GetFileDirectory(FileDirectory dir)

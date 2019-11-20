@@ -35,14 +35,13 @@ namespace PeriwinkleApp.Android.Source.Presenters.ClientFragments
 
 		public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
 		{
-			//TODO layout netong view response
 			return inflater.Inflate(Resource.Layout.client_view_response_scores, container, false);
 		}
 
 		public override async void OnViewCreated(View view, Bundle savedInstanceState)
 		{
 			base.OnViewCreated(view, savedInstanceState);
-			txtDate = view.FindViewById<TextView>(Resource.Id.score_weight);
+			txtDate = view.FindViewById<TextView>(Resource.Id.score_date);
 			txtHeight = view.FindViewById<TextView>(Resource.Id.score_height);
 			txtWeight = view.FindViewById<TextView>(Resource.Id.score_weight);
 			txtBMI = view.FindViewById<TextView>(Resource.Id.score_bmi);
@@ -58,8 +57,8 @@ namespace PeriwinkleApp.Android.Source.Presenters.ClientFragments
 			Logger.Log("DISPLAY RESPONSE");
 
 			txtDate.Text = mbes.DateCreated.ToShortDateString();
-			txtHeight.Text = mbes.Height.Value.ToString() + "cm";
-			txtWeight.Text = mbes.Weight.Value.ToString() + "kg";
+			txtHeight.Text = mbes.Height.Value.ToString("0.00") + "cm";
+			txtWeight.Text = mbes.Weight.Value.ToString("0.00") + "kg";
 			txtBMI.Text = mbes.BMI.Value.ToString("0.00");
 			txtBinge.Text = score.BingeScore.ToString("0.00");
 			txtBulimia.Text = score.BulimiaScore.ToString("0.00");

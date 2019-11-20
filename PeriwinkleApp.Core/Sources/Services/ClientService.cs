@@ -111,8 +111,7 @@ namespace PeriwinkleApp.Core.Sources.Services
 		{
 			string url = ApiUri.AddJournalEntry.ToUrl ();
 
-			var response = await httpService.PostMultipartFormDataContent
-							   <IEnumerable <ApiResponse>, JournalEntry> (url, journalEntry, journalEntry.ImageBytes, journalEntry.ImageFileName);
+			var response = await httpService.PostReadResponse<IEnumerable<ApiResponse>, JournalEntry>(url, journalEntry);
 
 			return response.ToList ();
 		}
@@ -198,21 +197,10 @@ namespace PeriwinkleApp.Core.Sources.Services
 
 		public async Task<List<ApiResponse>> AddSensorRecord(SensorRecord record)
 		{
-			// TODO
 			string url = ApiUri.AddSensorRecord.ToUrl();
-
 			string filename = record.Filename;
-			SensorRecordType type = record.RecordType.Value;
 
-			FileDirectory dir;
-
-			if (type == SensorRecordType.Acceleration)
-				dir = FileDirectory.Accelerometer;
-			else
-				dir = FileDirectory.Graph;
-
-
-			IFileService fileService = new FileService(dir);
+			IFileService fileService = new FileService(FileDirectory.SensorRecord);
 			string content = await fileService.ReadToEndAsStringAsync(filename);
 			byte[] bytesContent = content.ToBytesArray();
 
@@ -224,7 +212,6 @@ namespace PeriwinkleApp.Core.Sources.Services
 
 		public async Task<List<SensorRecord>> GetSensorRecordByClientId(int? clientId)
 		{
-			// TODO
 			string url = ApiUri.GetSensorRecordByClientId.ToUrl();
 
 			var keyVal = new KeyValuePair<string, string>("clientId", clientId.ToString().ToBase64());

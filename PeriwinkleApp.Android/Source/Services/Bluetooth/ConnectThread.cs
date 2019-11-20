@@ -39,6 +39,7 @@ namespace PeriwinkleApp.Android.Source.Services.Bluetooth
 
 		public override void Run ()
 		{
+			Logger.Log("ConnectThread Run");
 			BtAdapter.CancelDiscovery ();
 
 			try
@@ -56,11 +57,13 @@ namespace PeriwinkleApp.Android.Source.Services.Bluetooth
 
 		public void Cancel ()
 		{
-			CloseSocket ();
+			Logger.Log("ConnectThread Cancel");
+			CloseSocket();
 		}
 
 		private void CloseSocket ()
 		{
+			Logger.Log("ConnectThread CloseSocket");
 			try
 			{
 				socket.Close();

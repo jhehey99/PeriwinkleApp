@@ -1,4 +1,5 @@
 ﻿using PeriwinkleApp.Core.Sources.Models.Domain;
+using System.Threading.Tasks;
 
 namespace PeriwinkleApp.Core.Sources.Services.Interfaces
 {
@@ -6,5 +7,6 @@ namespace PeriwinkleApp.Core.Sources.Services.Interfaces
     {
         Password GenerateHashedPassword (string plainPassword);
         bool VerifyPasswordHash (string inputPassword, Password userPassword);
-    }
+        Task<bool> VerifyPasswordHashAsync (string inputPassword, Password userPassword);
+	}
 }

@@ -24,7 +24,7 @@
 			android:orientation="vertical"
 			android:layout_width="fill_parent"
 			android:layout_height="match_parent"
-			android:layout_marginHorizontal="20dp">
+			android:layout_marginHorizontal="10dp">
 
 			<EditText
 				android:id="@+id/txt_create_journal_title"
@@ -47,45 +47,18 @@
 				android:layout_marginBottom="10dp"
 				android:padding="10dp" />
 
-			<ImageView
-				android:id="@+id/img_create_journal"
-				android:layout_width="match_parent"
-				android:layout_height="wrap_content"
-				android:scaleType="centerCrop" />
 		</LinearLayout>
 
-		<LinearLayout
+		<Button
+			android:id="@+id/btn_create_journal"
+			android:text="Create Journal"
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
-			android:orientation="horizontal">
-
-			<Button
-				android:id="@+id/btn_upload_image"
-				android:text="Attach Image"
-				android:layout_width="match_parent"
-				android:layout_height="wrap_content"
-				android:layout_weight="0.5"
-				android:textSize="16dp"
-				android:layout_marginTop="30dp"
-				android:layout_marginLeft="30dp"
-				android:layout_marginRight="10dp"
-				android:textColor="@android:color/white"
-				android:background="@color/primary_dark" />
-
-			<Button
-				android:id="@+id/btn_create_journal"
-				android:text="Create Journal"
-				android:layout_width="match_parent"
-				android:layout_height="wrap_content"
-				android:layout_weight="0.5"
-				android:textSize="16dp"
-				android:layout_marginTop="30dp"
-				android:layout_marginLeft="10dp"
-				android:layout_marginRight="30dp"
-				android:textColor="@android:color/white"
-				android:background="@color/primary_dark" />
-
-		</LinearLayout>
+			android:textSize="16dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="50dp"
+			android:textColor="@android:color/white"
+			android:background="@color/primary_dark" />
 	
 	</LinearLayout>
 </ScrollView>

@@ -47,7 +47,9 @@ namespace PeriwinkleApp.Android.Source.Services.Bluetooth
 			}
 
             InStream = tempIn;
+			InStream.Flush();
 			OutStream = tempOut;
+			OutStream.Flush();
 		}
 
 		public override void Run ()
@@ -80,7 +82,7 @@ namespace PeriwinkleApp.Android.Source.Services.Bluetooth
 				catch (IOException e)
 				{
 					Logger.Log("Input stream was disconnected " + e.Message);
-					//OnSocketClosed(this, new EventArgs());
+					OnSocketClosed(this, new EventArgs());
 					break;
 				}
             }

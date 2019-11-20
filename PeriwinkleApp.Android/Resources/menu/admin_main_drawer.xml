@@ -8,19 +8,15 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/menu_nav_home"
-            android:icon="@drawable/ic_menu_camera"
             android:title="@string/menu_home_title" />
         <item
             android:id="@+id/menu_nav_clients"
-            android:icon="@drawable/ic_menu_gallery"
             android:title="@string/menu_cli_title" />
         <item
             android:id="@+id/menu_nav_consultants"
-            android:icon="@drawable/ic_menu_slideshow"
             android:title="@string/menu_con_title" />
         <item
             android:id="@+id/menu_nav_pending"
-            android:icon="@drawable/ic_menu_manage"
             android:title="@string/menu_pend_title" />
     </group>
 
@@ -28,7 +24,6 @@
         <menu>
             <item
                 android:id="@+id/menu_nav_logout"
-                android:icon="@drawable/ic_menu_share"
                 android:title="@string/menu_logout_title" />
         </menu>
     </item>

@@ -52,7 +52,7 @@ namespace PeriwinkleApp.Android.Source.Presenters.ClientPresenters
 			List<SensorRecordAdapterModel> dataSet =
 				records.Select((t, i) => new SensorRecordAdapterModel()
 				{
-					RecordType = t.RecordType.Value,
+					Filename = t.Filename,
 					StartTime = t.StartTime,
 					StopTime = t.StopTime,
 					Position = i
